@@ -1,3 +1,1 @@
 # easyjs
-##easyjs
-###easyjs
