@@ -11,6 +11,8 @@ html, body {
 	left: 0;
 	bottom: 0;
 	right: 0;
+	margin: 0;
+	padding: 1em;
 
 	text-align: center;
 
@@ -42,5 +44,26 @@ h1 * {
 #title {
 	font-family: var(--font-family-body);
 	font-size: xxx-large;
-	margin-bottom: 0;
+	margin: 0;
+}
+
+#nav {
+	width: 20vw;
+	font-size: x-large;
+}
+#nav>a {
+	padding: 0.5em;
+	transition: transform 0.75s, background-color 1s;
+	display: inline-block;
+	border-radius: 0.5em;
+	text-decoration: none;
+	color: var(--easyjs-link);
+}
+#nav>a:hover, #nav>a:focus {
+	transform: rotateY(30deg);
+	background-color: var(--easyjs-buttonBg);
+}
+
+#main {
+	width: 80vw;
 }
