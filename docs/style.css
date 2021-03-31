@@ -9,7 +9,8 @@ html, body {
 
 	text-align: center;
 
-	color: var(--easyjs-subText);
+	color: var(--easyjs-text);
+	background-color: var(--easyjs-bg);
 }
 
 h1>span {
