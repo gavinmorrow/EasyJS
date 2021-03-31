@@ -22,12 +22,12 @@ const darkColors = {
 	subText: "#cccfcd",
 }
 
-export default {
+const exports = {
 	set: light => localStorage.colorScheme = light ? "1" : "",
 	reset: () => localStorage.colorScheme = matchMedia("prefers-color-scheme: light") ? "1" : "",
 	setColors: (light = lightColors, dark = darkColors) => {
 		const colors = ["bg", "navBg", "cardBg", "buttonBg", "divideBg", "text", "subText"];
-		const setVar = (name, value) => getComputedStyle(document.documentElement).setProperty(`--easyjs-${name}`, value);
+		const setVar = (name, value) => document.documentElement.style.setProperty(`--easyjs-${name}`, value);
 		for (const color of colors) {
 			lightColors[color] = light[color] || lightColors[color];
 			darkColors[color] = light[color] || darkColors[color];
@@ -43,9 +43,17 @@ export default {
 					throw new Error(`EasyJS UI Color Scheme colorScheme property is invalid. \n\nValue: "${localStorage.colorScheme}"`);
 			}
 		}
+		
+		return exports.colors;
 	},
-	getColors: () => ({
-		light: lightColors,
-		dark: darkColors,
-	}),
+	get colors () {
+		return {
+			light: lightColors,
+			dark: darkColors,
+		};
+	},
 };
+
+exports.reset();
+
+export default exports;
