@@ -1,6 +1,11 @@
-@import "https://fonts.googleapis.com/css?family=Jura&display=swap";
+@import "https://fonts.googleapis.com/css?family=Jura|Major Mono Display|Comfortaa&display=swap";
 
 html, body {
+	--font-family-body: "Jura", "Comfortaa", sans-serif;
+	--font-family-heading: "Major Mono Display", monospace, var(--font-family-body);
+
+	font-family: var(--font-family-body);
+
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -13,6 +18,20 @@ html, body {
 	background-color: var(--easyjs-bg);
 }
 
-h1>span {
-	
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-family-heading);
+}
+
+h1 {
+	font-size: xx-large;
+	font-weight: normal;
+}
+h1 * {
+	color: var(--easyjs-subText);
+	font-size: smaller;
+}
+
+#title {
+	font-family: var(--font-family-body);
+	font-size: xxx-large;
 }
