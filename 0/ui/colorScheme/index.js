@@ -9,7 +9,7 @@ const lightColors = {
 	divideBg: "#2c2c2c",
 
 	text: "#131012",
-	subText: "#333032",
+	subText: "#535353",
 }
 const darkColors = {
 	bg: "#111111",
@@ -19,7 +19,7 @@ const darkColors = {
 	divideBg: "#d3d3d3",
 
 	text: "#ecefed",
-	subText: "#cccfcd",
+	subText: "#acacac",
 }
 
 const exports = {
@@ -27,7 +27,7 @@ const exports = {
 	reset: () => localStorage.colorScheme = matchMedia("prefers-color-scheme: light") ? "1" : "",
 	setColors: (light = lightColors, dark = darkColors) => {
 		const colors = ["bg", "navBg", "cardBg", "buttonBg", "divideBg", "text", "subText"];
-		const setVar = (name, value) => document.documentElement.style.setProperty(`--easyjs-${name}`, value);
+		const setVar = (name, value) => document.documentElement.style.setProperty(`--easyjs-${name}`, `${value}`);
 		for (const color of colors) {
 			lightColors[color] = light[color] || lightColors[color];
 			darkColors[color] = light[color] || darkColors[color];
@@ -55,5 +55,6 @@ const exports = {
 };
 
 exports.reset();
+exports.setColors();
 
 export default exports;
