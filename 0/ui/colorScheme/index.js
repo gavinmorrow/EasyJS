@@ -22,15 +22,15 @@ const darkColors = {
 	subText: "#acacac",
 }
 
-const exports = {
+const colorScheme = {
 	set: light => localStorage.colorScheme = light ? "1" : "",
-	reset: () => localStorage.colorScheme = matchMedia("prefers-color-scheme: light") ? "1" : "",
+	reset: () => localStorage.colorScheme = matchMedia("(prefers-color-scheme: light)").matches ? "1" : "",
 	setColors: (light = lightColors, dark = darkColors) => {
 		const colors = ["bg", "navBg", "cardBg", "buttonBg", "divideBg", "text", "subText"];
 		const setVar = (name, value) => document.documentElement.style.setProperty(`--easyjs-${name}`, `${value}`);
 		for (const color of colors) {
 			lightColors[color] = light[color] || lightColors[color];
-			darkColors[color] = light[color] || darkColors[color];
+			darkColors[color] = dark[color] || darkColors[color];
 
 			switch (localStorage.colorScheme) {
 				case "1":
@@ -44,7 +44,7 @@ const exports = {
 			}
 		}
 		
-		return exports.colors;
+		return colorScheme.colors;
 	},
 	get colors () {
 		return {
@@ -52,9 +52,15 @@ const exports = {
 			dark: darkColors,
 		};
 	},
+	autoChange: true,
 };
 
-exports.reset();
-exports.setColors();
+const update = () => {
+	if (colorScheme.autoChange)
+		colorScheme.reset();
+	colorScheme.setColors();
+};
+update();
+matchMedia("(prefers-color-scheme: light)").addEventListener("change", update);
 
-export default exports;
+export default colorScheme;
