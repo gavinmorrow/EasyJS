@@ -8,6 +8,8 @@ html, body {
 	right: 0;
 
 	text-align: center;
+
+	color: var(--easyjs-subText);
 }
 
 h1>span {
