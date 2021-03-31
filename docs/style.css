@@ -60,7 +60,7 @@ h1 * {
 	color: var(--easyjs-link);
 }
 #nav>a:hover, #nav>a:focus {
-	transform: rotateY(30deg);
+	transform: rotateY(20deg);
 	background-color: var(--easyjs-buttonBg);
 }
 
