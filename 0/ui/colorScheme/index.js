@@ -10,6 +10,7 @@ const lightColors = {
 
 	text: "#131012",
 	subText: "#535353",
+	link: "#0000ff",
 }
 const darkColors = {
 	bg: "#111111",
@@ -20,13 +21,18 @@ const darkColors = {
 
 	text: "#ecefed",
 	subText: "#acacac",
+	link: "#adddad",
 }
 
 const colorScheme = {
 	set: light => localStorage.colorScheme = light ? "1" : "",
 	reset: () => localStorage.colorScheme = matchMedia("(prefers-color-scheme: light)").matches ? "1" : "",
 	setColors: (light = lightColors, dark = darkColors) => {
-		const colors = ["bg", "navBg", "cardBg", "buttonBg", "divideBg", "text", "subText"];
+		const colors = [];
+		for (const color in lightColors) {
+			if (darkColors[color]) colors.push(color);
+		}
+
 		const setVar = (name, value) => document.documentElement.style.setProperty(`--easyjs-${name}`, `${value}`);
 		for (const color of colors) {
 			lightColors[color] = light[color] || lightColors[color];
