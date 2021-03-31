@@ -40,4 +40,13 @@ export default {
 		text,
 		subText,
 	}),
+	setCSS: () => {
+		getComputedStyle(document.documentElement).setProperty("--bg", bg);
+		getComputedStyle(document.documentElement).setProperty("--nav-bg", navBg);
+		getComputedStyle(document.documentElement).setProperty("--card-bg", cardBg);
+		getComputedStyle(document.documentElement).setProperty("--button-bg", butt);
+		getComputedStyle(document.documentElement).setProperty("--divide-bg", divideBg);
+		getComputedStyle(document.documentElement).setProperty("--text", text);
+		getComputedStyle(document.documentElement).setProperty("--sub-text", subText);
+	}
 };
