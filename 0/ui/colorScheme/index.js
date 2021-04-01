@@ -4,6 +4,7 @@
 const lightColors = {
 	bg: "#ffffff",
 	navBg: "#fefffe",
+	contrastNavBg: "#555855",
 	cardBg: "#efeeef",
 	buttonBg: "#e0e1e0",
 	divideBg: "#2c2c2c",
@@ -15,6 +16,7 @@ const lightColors = {
 const darkColors = {
 	bg: "#111111",
 	navBg: "#181818",
+	contrastNavBg: "#a5a8a5",
 	cardBg: "#303130",
 	buttonBg: "#383938",
 	divideBg: "#d3d3d3",
@@ -38,12 +40,16 @@ const colorScheme = {
 			lightColors[color] = light[color] || lightColors[color];
 			darkColors[color] = dark[color] || darkColors[color];
 
+			setVar(`dark-${color}`, darkColors[color]);
+			setVar(`light-${color}`, lightColors[color]);
 			switch (localStorage.colorScheme) {
 				case "1":
 					setVar(color, lightColors[color]);
+					setVar(`inverse-${color}`, darkColors[color]);
 					break;
 				case "":
 					setVar(color, darkColors[color]);
+					setVar(`inverse-${color}`, lightColors[color]);
 					break;
 				default:
 					throw new Error(`EasyJS UI Color Scheme colorScheme property is invalid. \n\nValue: "${localStorage.colorScheme}"`);
