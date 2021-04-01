@@ -31,6 +31,7 @@ nav {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-family-heading);
+	font-weight: normal;
 }
 
 h1 {
@@ -46,11 +47,12 @@ h1 * {
 	font-family: var(--font-family-body);
 	font-size: xxx-large;
 	margin: 0 0 auto 0;
-	padding: 0.25em 0.5em;
+	padding: var(--padding);
 	position: fixed;
 	top: 0;
 	width: 100%;
 	transition: box-shadow 0.5s;
+	background-color: var(--easyjs-navBg);
 }
 
 #nav {
@@ -74,6 +76,8 @@ h1 * {
 }
 
 #main {
+	--padding: 0.75rem 1.25rem;
+
 	overflow: scroll;
 	text-align: left;
 	position: relative;
@@ -81,4 +85,5 @@ h1 * {
 }
 #main>div {
 	height: 200vh;
+	padding: var(--padding);
 }
