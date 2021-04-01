@@ -16,7 +16,7 @@ const lightColors = {
 const darkColors = {
 	bg: "#111111",
 	navBg: "#181818",
-	contrastNavBg: "#a5a8a5",
+	contrastNavBg: "#858885",
 	cardBg: "#303130",
 	buttonBg: "#383938",
 	divideBg: "#d3d3d3",
