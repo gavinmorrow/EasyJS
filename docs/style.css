@@ -56,6 +56,9 @@ h1 * {
 #nav {
 	font-size: x-large;
 	padding: 1em;
+	position: relative;
+	z-index: 2;
+	box-shadow: 0.5vmin 0 1vmin 0 var(--easyjs-inverse-contrastNavBg);
 }
 .nav-a {
 	padding: 0.5em;
@@ -73,6 +76,8 @@ h1 * {
 #main {
 	overflow: scroll;
 	text-align: left;
+	position: relative;
+	z-index: 1;
 }
 #main>div {
 	height: 200vh;
