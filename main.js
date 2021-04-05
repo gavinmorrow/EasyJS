@@ -24,13 +24,10 @@ const EasyJSVersion = async (v = 0) => {
 
 	const EasyJS = new EasyJSVersion(v);
 
-	const i = setInterval(() => {
-		console.log(EasyJS.done, EasyJS.done ? Date.now() : void(0));
-		if (EasyJS.done) {
-			clearInterval(i);
-			return EasyJS;
-		}
-	});
+	do {
+		if (EasyJS.done) return EasyJS;
+		else await new Promise(resolve => setTimeout(resolve, 10));
+	}while (true);
 }
 
 export default EasyJSVersion;
