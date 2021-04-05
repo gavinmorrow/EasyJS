@@ -58,44 +58,6 @@ const lineGraph = {
 				default:
 					break;
 			}
-			
-			// if (typeof args[1] == "number") {
-			// 	const [x = 0, y = 0, redraw = true, clear = undefined] = args;
-
-			// 	for (const point of this.points) {
-			// 		if (point.x === x && point.y === y) {
-			// 			index = this.points.indexOf(point);
-			// 			break;
-			// 		}
-			// 	}
-
-			// 	next(redraw, clear);
-			// } else if (typeof args[1] == "boolean")  {
-			// 	const [index, redraw = true, clear = undefined] = args;
-
-			// 	for (let i = index; i < this.points.length; i++) {
-			// 		if (this.points[i+1]) this.points[i] = this.points[i+1];
-			// 		else this.points.pop();
-			// 	}
-
-			// 	next(redraw, clear);
-			// }
-
-			// if (typeof redraw === "number") {
-			// 	const x = index;
-			// 	const y = redraw;
-			// 	for (const point of this.points) {
-			// 		if (point.x === x && point.y === y) {
-			// 			index = this.points.indexOf(point);
-			// 			break;
-			// 		}
-			// 	}
-			// }
-
-			// for (let i = index; i < this.points.length; i++) {
-			// 	if (this.points[i+1]) this.points[i] = this.points[i+1];
-			// 	else this.points.pop();
-			// }
 		}
 	}
 };
