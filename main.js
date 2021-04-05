@@ -6,7 +6,7 @@ const EasyJSVersion = class {
 		const awaiter = async name => await import(`./${v}/${name}/${name}.js`).then(r => r.default);
 
 		(async () => {
-			const divisions = ["math", "canvas", "string", "ui"];
+			const divisions = ["canvas", "math", "string", "ui"];
 
 			for (const division of divisions) {
 				this[division] = await awaiter(division);
