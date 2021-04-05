@@ -27,6 +27,5 @@ main.style.paddingTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(g
 	// console.log(EasyJS);
 	const graph = new EasyJS.canvas.lineGraph.LineGraph(canvas, 0, canvas.height, [{x: canvas.width/2, y: 0}, {x: canvas.width, y: canvas.height}]);
 
-	setTimeout(() => graph.removePoint(canvas.width/2, 0, false), 1000);
-	setTimeout(() => graph.draw(), 2000);
+	setTimeout(() => graph.removePoint(canvas.width/2, 0), 1000);
 })();
