@@ -26,7 +26,7 @@ const EasyJSVersion = async (v = 0) => {
 
 	do {
 		if (EasyJS.done) return EasyJS;
-		else await new Promise(resolve => setTimeout(resolve, 10));
+		else await new Promise(resolve => resolve);
 	}while (true);
 }
 
