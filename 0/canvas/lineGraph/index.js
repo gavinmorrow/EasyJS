@@ -14,12 +14,12 @@ const lineGraph = {
 			if (draw) this.draw();
 		}
 		draw () {
-			ctx.beginPath();
-			ctx.moveTo(this.x, this.y);
+			this.ctx.beginPath();
+			this.ctx.moveTo(this.x, this.y);
 			for (const point of this.points) {
-				ctx.lineTo(point.x, point.y);
+				this.ctx.lineTo(point.x, point.y);
 			}
-			ctx.stroke();
+			this.ctx.stroke();
 		}
 		addPoint (point, redraw = true) {
 			this.points.push(point);
