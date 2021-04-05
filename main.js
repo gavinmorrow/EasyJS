@@ -15,6 +15,8 @@ const EasyJSVersion = class {
 			}
 
 			this.done = true;
+
+			return this;
 		}).bind(this)();
 	}
 }
