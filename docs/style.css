@@ -43,9 +43,6 @@ h1 * {
 	font-style: italic;
 }
 
-h2 {
-	
-}
 h2::before {
 	content: "EasyJS ";
 	font-family: var(--font-family-body);

@@ -23,8 +23,8 @@ main.addEventListener("scroll", titleBoxShadowSet);
 main.style.paddingTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(getComputedStyle(title).paddingTop) + pxToNum(getComputedStyle(title).paddingBottom)}px`;
 
 (async () => {
-	const EasyJS = await new EasyJSVersion();
-	console.log(EasyJS);
+	const EasyJS = await EasyJSVersion();
+	console.log(EasyJS, Date.now());
 	const graph = new EasyJS.canvas.lineGraph.LineGraph(document.getElementById("canvas"), 0, 0, [
 		{
 			x: 100,
