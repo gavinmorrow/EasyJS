@@ -43,8 +43,6 @@ const lineGraph = {
 							break;
 						}
 					}
-
-					next(redraw1, clear1);
 				case "boolean":
 					const [index, redraw = true, clear = undefined] = first ? [i, redraw1, clear1] : args;
 
@@ -53,7 +51,7 @@ const lineGraph = {
 						else this.points.pop();
 					}
 
-					next(redraw1, clear1);
+					next(redraw, clear);
 					break;
 				default:
 					break;
