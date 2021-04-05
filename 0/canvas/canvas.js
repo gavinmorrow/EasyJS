@@ -1,8 +1,10 @@
 // © 2021 Gavin Morrow
 // EasyJS Canvas
 
-const canvas = {
+import lineGraph from "./lineGraph/index.js";
 
+const canvas = {
+	lineGraph,
 };
 
 export default canvas;
