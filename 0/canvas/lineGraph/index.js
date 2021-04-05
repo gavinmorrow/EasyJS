@@ -22,8 +22,8 @@ const lineGraph = {
 			}
 			this.ctx.stroke();
 		}
-		addPoint (point, redraw = true) {
-			this.points.push(point);
+		addPoint (point, index = this.points.length, redraw = true) {
+			this.points[index] = point;
 			if (redraw) this.draw();
 		}
 		removePoint (...args) {
@@ -56,6 +56,9 @@ const lineGraph = {
 				default:
 					break;
 			}
+		}
+		changePoint () {
+
 		}
 	}
 };
