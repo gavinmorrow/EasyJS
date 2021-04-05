@@ -1,5 +1,5 @@
 import colorScheme from "../0/ui/colorScheme/index.js";
-import EasyJS from "../main.js";
+import EasyJSVersion from "../main.js";
 
 const main = document.getElementById("main");
 const nav = document.getElementById("nav");
@@ -22,4 +22,13 @@ main.addEventListener("scroll", titleBoxShadowSet);
 
 main.style.paddingTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(getComputedStyle(title).paddingTop) + pxToNum(getComputedStyle(title).paddingBottom)}px`;
 
-console.log(new EasyJS());
+(async () => {
+	const EasyJS = await new EasyJSVersion();
+	console.log(EasyJS);
+	const graph = new EasyJS.canvas.lineGraph.LineGraph(document.getElementById("canvas"), 0, 0, [
+		{
+			x: 100,
+			y: 100,
+		}
+	]);
+})();
