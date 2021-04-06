@@ -24,9 +24,12 @@ const lineGraph = {
 		addPoint (point, index = this.points.length, redraw = true) {
 			this.points[index] = point;
 			if (redraw) this.draw();
+			return this.points.length;
 		}
 		removePoint (...args) {
 			const next = (redraw, clear) => redraw ? this.draw(clear) : void 0;
+
+			let removed;
 
 			let first = false;
 			switch (typeof args[1]) {
@@ -42,17 +45,16 @@ const lineGraph = {
 
 					for (let i = index; i < this.points.length; i++) {
 						if (this.points[i+1]) this.points[i] = this.points[i+1];
-						else this.points.pop();
+						else removed = this.points.pop();
 					}
 
 					next(redraw, clear);
-					break;
 				default:
-					break;
+					return removed;
 			}
 		}
 		getPoint (arg1, arg2) {
-			if (arg2) {
+			if (arg2 != undefined) {
 				const x = arg1;
 				const y = arg2;
 
@@ -60,11 +62,17 @@ const lineGraph = {
 					const point = this.points[i];
 					if (point.x == x && point.y == y) return this.points.indexOf(point);
 				}
-			}else return this.points[arg1];
+
+				throw new Error("No such point.");
+			}
+			if (this.points[arg1] == undefined) throw new Error("Index out of bounds.");
+			return this.points[arg1];
 		}
 		changePoint(index, newValue, redraw = true, clear = undefined) {
 			this.points[index] = newValue;
 			if (redraw) this.draw(clear);
+
+			return this.points[index];
 		}
 	}
 };
