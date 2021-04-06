@@ -36,12 +36,7 @@ const lineGraph = {
 
 					first = true;
 
-					for (const point of this.points) {
-						if (point.x === x && point.y === y) {
-							i = this.points.indexOf(point);
-							break;
-						}
-					}
+					i = this.getPoint(x, y);
 				case "boolean":
 					const [index, redraw = true, clear = undefined] = first ? [i, redraw1, clear1] : args;
 
@@ -66,6 +61,10 @@ const lineGraph = {
 					if (point.x == x && point.y == y) return this.points.indexOf(point);
 				}
 			}else return this.points[arg1];
+		}
+		changePoint(index, newValue, redraw = true, clear = undefined) {
+			this.points[index] = newValue;
+			if (redraw) this.draw(clear);
 		}
 	}
 };
