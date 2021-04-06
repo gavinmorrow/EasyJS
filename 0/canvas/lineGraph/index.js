@@ -7,16 +7,15 @@ const lineGraph = {
 			this.canvas = canvas;
 			this.ctx = this.canvas.getContext("2d");
 
-			this.x = x;
-			this.y = y;
 			this.points = points;
+			this.points.unshift({x, y});
 
 			if (draw) this.draw();
 		}
 		draw (clear = true) {
 			this.ctx.beginPath();
 			if (clear) this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-			this.ctx.moveTo(this.x, this.y);
+			this.ctx.moveTo(this.points[0].x, this.points[0].y);
 			for (const point of this.points) {
 				this.ctx.lineTo(point.x, point.y);
 			}
@@ -57,8 +56,16 @@ const lineGraph = {
 					break;
 			}
 		}
-		changePoint () {
+		getPoint (arg1, arg2) {
+			if (arg2) {
+				const x = arg1;
+				const y = arg2;
 
+				for (let i = 0; i < this.points.length; i++) {
+					const point = this.points[i];
+					if (point.x == x && point.y == y) return this.points.indexOf(point);
+				}
+			}else return this.points[arg1];
 		}
 	}
 };
