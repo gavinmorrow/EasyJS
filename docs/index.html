@@ -9,14 +9,23 @@
 </head>
 <body>
 	<nav id="nav">
-		<a href="javascript:void(main.scroll({top: 0, left: 0, behavior: 'smooth'}));" class="nav-a">EasyJS</a>
+		<a href="javascript:void(main.scroll({top: 0, left: 0, behavior: 'smooth'}));" class="nav-a here">Overview</a>
+		<a href="#math-title" class="nav-a">Math</a>
 	</nav>
 	<article id="main">
-		<h1 id="title">EasyJS <span>v1.0.0</span></h1>
+		<h1 id="title"><div id="title-inner">EasyJS</div> <span>v1.0.0</span></h1>
 		<div>
-			<section id="math">
+			<section id="canvas" class="section" >
+				<h2 id="canvas-title">Canvas</h2>
+			</section>
+			<section id="math" class="section">
 				<h2 id="math-title">Math</h2>
-				<canvas id="canvas"></canvas>
+			</section>
+			<section id="string" class="section">
+				<h2 id="string-title">String</h2>
+			</section>
+			<section id="ui" class="section">
+				<h2 id="ui-title">ui</h2>
 			</section>
 		</div>
 	</article>

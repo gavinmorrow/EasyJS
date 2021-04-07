@@ -23,8 +23,22 @@ main.style.paddingTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(g
 
 (async () => {
 	const EasyJS = await EasyJSVersion();
-	const canvas = document.getElementById("canvas");
-	const graph = new EasyJS.canvas.lineGraph.LineGraph(canvas, 0, canvas.height, [{x: canvas.width/2, y: 0}, {x: canvas.width, y: canvas.height}]);
 
-	setTimeout(() => graph.removePoint(canvas.width/2, 0), 1000);
+	const observeSection = (target, name = target.id) => {
+		const thresholdBase = innerHeight / Math.max(target.offsetHeight, innerHeight);
+
+		const observer = new IntersectionObserver((entries, observer) => {
+			console.log(entries, name);
+			document.getElementById("title-inner").textContent = name;
+		}, {
+			root: document.getElementById("main").querySelector("div"),
+			threshold: [thresholdBase*0,thresholdBase*0.1,thresholdBase*0.25,thresholdBase*0.5,thresholdBase*0.75,thresholdBase*1,],
+		});
+
+		observer.observe(target);
+	}
+
+	for (const section of document.querySelectorAll(".section")) {
+		observeSection(section, section.id);
+	}
 })();
