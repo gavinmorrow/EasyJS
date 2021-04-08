@@ -24,21 +24,29 @@ main.style.paddingTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(g
 (async () => {
 	const EasyJS = await EasyJSVersion();
 
-	const observeSection = (target, name = target.id) => {
-		const thresholdBase = innerHeight / Math.max(target.offsetHeight, innerHeight);
+	const scrollUpdate = () => {
+		for (const section of document.querySelectorAll(".section")) {
+			if (section.getBoundingClientRect().top > 0) {
+				if (section.getBoundingClientRect().top <= title.offsetHeight / 2) {
+					// Section is underneath the title
+					document.getElementById("title-inner").textContent = section.id;
+					document.querySelector(`.nav-a[href*="${section.id}"]`).classList.add("here");
+				} else if (section.getBoundingClientRect().top > title.offsetHeight / 2) {
+					if (section == main.querySelector("div").firstElementChild) {
+						document.getElementById("title-inner").textContent = "";
+						document.querySelector(`.nav-a:first-of-type`).classList.add("here");
+					}
+				}
+			}
+		}
+	};
+	scrollUpdate();
+	main.addEventListener("scroll", scrollUpdate);
 
-		const observer = new IntersectionObserver((entries, observer) => {
-			console.log(entries, name);
-			document.getElementById("title-inner").textContent = name;
-		}, {
-			root: document.getElementById("main").querySelector("div"),
-			threshold: [thresholdBase*0,thresholdBase*0.1,thresholdBase*0.25,thresholdBase*0.5,thresholdBase*0.75,thresholdBase*1,],
-		});
-
-		observer.observe(target);
-	}
-
-	for (const section of document.querySelectorAll(".section")) {
-		observeSection(section, section.id);
+	for (const a of document.querySelectorAll(".nav-a")) {
+		a.addEventListener("click", () => {
+			scrollUpdate();
+			// a.blur();
+		})
 	}
 })();
