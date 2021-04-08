@@ -31,7 +31,7 @@ nav {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--font-family-heading);
+	font-family: var(--font-family-body);
 	font-weight: normal;
 }
 
@@ -44,13 +44,35 @@ h1 span {
 	font-style: italic;
 }
 
-#main h2 {
-	background-color: var(--easyjs-bg);
+.section-title {
+	background-color: var(--easyjs-cardBg);
+	--border-radius: 2vmax;
+	--padding: var(--border-radius);
+	border-radius: var(--border-radius);
+	padding: var(--padding);
 }
-h2::before {
+.section-title::before {
 	content: "EasyJS ";
 	font-family: var(--font-family-body);
 	font-size: larger;
+}
+
+h2 {
+	padding-bottom: 1vmin;
+	width: fit-content;
+	position: relative;
+}
+h2::after {
+	position: relative;
+	content: "";
+	display: block;
+	width: 5vmax;
+	margin-top: 1vmin;
+	border-bottom: 1px solid var(--easyjs-text);
+	transition: width 1s;
+}
+h2:hover::after, h2:focus::after {
+	width: 100%;
 }
 
 #title {
@@ -63,6 +85,7 @@ h2::before {
 	width: 100%;
 	transition: box-shadow 0.5s;
 	background-color: var(--easyjs-navBg);
+	z-index: 100;
 }
 #title-inner {
 	display: inline-block;
@@ -118,11 +141,14 @@ h2::before {
 	position: relative;
 	z-index: 1;
 }
-#main>div {
-	height: 200vh;
+#main-inner {
 	padding: var(--padding);
 }
 
 .section {
-	height: 100vh;
+	
+}
+
+.example {
+
 }

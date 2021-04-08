@@ -9,7 +9,7 @@
 </head>
 <body>
 	<nav id="nav">
-		<a href="javascript:void(main.scroll({top: 0, left: 0, behavior: 'smooth'}));" class="nav-a">Overview</a>
+		<a href="#overview-title" class="nav-a">Overview</a>
 		<a href="#canvas-title" class="nav-a">Canvas</a>
 		<a href="#math-title" class="nav-a">Math</a>
 		<a href="#string-title" class="nav-a">String</a>
@@ -17,18 +17,25 @@
 	</nav>
 	<article id="main">
 		<h1 id="title">EasyJS <div id="title-inner"></div> <span>v1.0.0</span></h1>
-		<div>
+		<div id="main-inner">
+			<section id="overview" class="section">
+				<h1 id="overview-title" class="section-title">Overview</h1>
+				<h2>What is EasyJS?</h2>
+				EasyJS is a JavaScript library for simplifying your code. 
+				<h2>Try EasyJS</h2>
+			</section>
 			<section id="canvas" class="section" data-text-transform="capitalize">
-				<h2 id="canvas-title">Canvas</h2>
+				<h1 id="canvas-title" class="section-title">Canvas</h1>
+				
 			</section>
 			<section id="math" class="section" data-text-transform="capitalize">
-				<h2 id="math-title">Math</h2>
+				<h1 id="math-title" class="section-title">Math</h1>
 			</section>
 			<section id="string" class="section" data-text-transform="capitalize">
-				<h2 id="string-title">String</h2>
+				<h1 id="string-title" class="section-title">String</h1>
 			</section>
 			<section id="ui" class="section" data-text-transform="uppercase">
-				<h2 id="ui-title">UI</h2>
+				<h1 id="ui-title" class="section-title">UI</h1>
 			</section>
 		</div>
 	</article>

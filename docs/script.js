@@ -34,9 +34,9 @@ main.style.paddingTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(g
 					// Section is underneath the title
 					document.getElementById("title-inner").textContent = section.id;
 					document.querySelector(`.nav-a[href*="${section.id}"]`).classList.add("here");
-					document.getElementById("title-inner").style.textTransform = section.getAttribute("data-text-transform");
+					document.getElementById("title-inner").style.textTransform = section.getAttribute("data-text-transform") || "capitalize";
 				} else {
-					if (section == main.querySelector("div").firstElementChild) {
+					if (section == document.getElementById("main-inner").firstElementChild) {
 						// Nothing is in the range, go to the overview. 
 						document.getElementById("title-inner").textContent = "";
 						document.querySelector(`.nav-a:first-of-type`).classList.add("here");
