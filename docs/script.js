@@ -25,14 +25,19 @@ main.style.paddingTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(g
 	const EasyJS = await EasyJSVersion();
 
 	const scrollUpdate = () => {
+		document.querySelector(`.nav-a:first-of-type`).classList.remove("here");
 		for (const section of document.querySelectorAll(".section")) {
-			if (section.getBoundingClientRect().top > 0) {
+			document.querySelector(`.nav-a[href*="${section.id}"]`).classList.remove("here");
+			if (section.getBoundingClientRect().bottom > 0) {
+				// In viewport
 				if (section.getBoundingClientRect().top <= title.offsetHeight / 2) {
 					// Section is underneath the title
 					document.getElementById("title-inner").textContent = section.id;
 					document.querySelector(`.nav-a[href*="${section.id}"]`).classList.add("here");
-				} else if (section.getBoundingClientRect().top > title.offsetHeight / 2) {
+					document.getElementById("title-inner").style.textTransform = section.getAttribute("data-text-transform");
+				} else {
 					if (section == main.querySelector("div").firstElementChild) {
+						// Nothing is in the range, go to the overview. 
 						document.getElementById("title-inner").textContent = "";
 						document.querySelector(`.nav-a:first-of-type`).classList.add("here");
 					}
@@ -46,7 +51,7 @@ main.style.paddingTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(g
 	for (const a of document.querySelectorAll(".nav-a")) {
 		a.addEventListener("click", () => {
 			scrollUpdate();
-			// a.blur();
+			a.blur();
 		})
 	}
 })();

@@ -2,6 +2,7 @@
 
 html, body {
 	--font-family-body: "Jura", "Comfortaa", sans-serif;
+	--font-family-body2: "Comfortaa", "Jura", sans-serif;
 	--font-family-heading: "Major Mono Display", monospace, var(--font-family-body);
 
 	font-family: var(--font-family-body);
@@ -64,7 +65,8 @@ h2::before {
 	background-color: var(--easyjs-navBg);
 }
 #title-inner {
-	
+	display: inline-block;
+	font: smaller var(--font-family-body2);
 }
 
 #nav {
@@ -78,12 +80,15 @@ h2::before {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	transition: width 1s;
 }
 .nav-a {
 	--padding: 0.5em;
 	padding: var(--padding);
 	margin: calc(var(--padding) / 2);
-	transition: transform 0.75s, background-color 1s, border-left 1s, border-radius 1s;
+	--transition: transform 0.75s;
+	transition: var(--transition), background-color 1s;
 	display: inline-block;
 	border-radius: var(--padding);
 	text-decoration: none;
@@ -91,31 +96,17 @@ h2::before {
 	vertical-align: middle;
 	width: fit-content;
 }
-.nav-a.here {
-	/* border-left: 0.5vmin solid var(--easyjs-inverse-text); */
-	/* box-shadow: -0.5vmin 0 0 var(--easyjs-inverse-text); */
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-.nav-a.here::before {
-	--size: 0.5vmin;
-	content: "|";
-	font-size: larger;
-	background-color: var(--easyjs-inverse-text);
-	color: var(--easyjs-inverse-text);
-	width: var(--size);
-	height: var(--size);
-	position: relative;
-	display: inline;
-	margin-right: 1vmin;
-	border-radius: calc(0.5vmin / 2);
-}
 .nav-a:hover, .nav-a:focus {
 	transform: rotateY(20deg);
 	background-color: var(--easyjs-inverse-buttonBg);
 
 	border-top-left-radius: var(--padding);
 	border-bottom-left-radius: var(--padding);
+}
+.nav-a.here {
+	background-color: var(--easyjs-buttonBg);
+	color: var(--easyjs-text);
+	transition: var(--transition), background-color 0.5s;
 }
 
 #main {
@@ -130,4 +121,8 @@ h2::before {
 #main>div {
 	height: 200vh;
 	padding: var(--padding);
+}
+
+.section {
+	height: 100vh;
 }
