@@ -71,7 +71,7 @@ h2::after {
 	position: relative;
 	content: "";
 	display: block;
-	width: 5vmax;
+	width: calc(var(--border-radius) * 4);
 	margin-top: 1vmin;
 	border-bottom: 1px solid var(--easyjs-text);
 	transition: width 1s;
@@ -148,6 +148,7 @@ h2:hover::after, h2:focus::after {
 }
 #main-inner {
 	padding: var(--padding);
+	scroll-behavior: smooth;
 }
 
 .section {
@@ -162,4 +163,9 @@ h2:hover::after, h2:focus::after {
 	margin: calc(var(--padding) / 2) 0;
 
 	display: inline-block;
+}
+.example.block {
+	display: block;
+
+	--statement: rgb(200, 0, 226);
 }
