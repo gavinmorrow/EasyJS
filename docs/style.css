@@ -169,3 +169,16 @@ h2:hover::after, h2:focus::after {
 
 	--statement: rgb(200, 0, 226);
 }
+
+:is(h1, h2, h3, h4, h5, h6)[id]::before, :is(h1, h2, h3, h4, h5, h6)[id]::before {
+	content: "¶";
+	display: inline-block;
+	transition: opacity 1s, width 1s;
+	opacity: 0;
+	width: 0;
+	color: var(--easyjs-link);
+}
+:is(h1, h2, h3, h4, h5, h6)[id]:hover::before, :is(h1, h2, h3, h4, h5, h6)[id]:focus::before {
+	opacity: 1;
+	width: fit-content;
+}
