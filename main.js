@@ -1,11 +1,11 @@
 // © 2021 Gavin Morrow
 // EasyJS
 
-const EasyJSVersion = async (v = 0) => {
+const EasyJSVersion = async (v = 1) => {
 	const EasyJSVersion = class {
 		done = false;
 	
-		constructor (v = 0) {
+		constructor (v) {
 			const awaiter = async name => await import(`./${v}/${name}/${name}.js`).then(r => r.default);
 	
 			(async () => {
