@@ -7,10 +7,8 @@ const closeNav = document.getElementById("close");
 
 const realign = () => main.style.width = `calc(${innerWidth}px - ${nav.offsetWidth}px)`;
 const titleBoxShadowSet = () => {
-	if (main.scrollTop > 0)
-		title.style.boxShadow = "0 0 1vmin 0 var(--easyjs-text)";
-	else
-		title.style.boxShadow = "0 0 0.25vmin 0 var(--easyjs-text)";
+	if (main.scrollTop > 0) title.style.boxShadow = "0 0 1vmin 0 var(--easyjs-text)";
+	else title.style.boxShadow = "0 0 0.25vmin 0 var(--easyjs-text)";
 };
 const pxToNum = px => Number(px.split("px")[0]);
 
@@ -20,7 +18,7 @@ addEventListener("resize", realign);
 titleBoxShadowSet();
 main.addEventListener("scroll", titleBoxShadowSet);
 
-main.style.paddingTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(getComputedStyle(title).paddingTop) + pxToNum(getComputedStyle(title).paddingBottom)}px`;
+main.style.marginTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(getComputedStyle(title).paddingTop) + pxToNum(getComputedStyle(title).paddingBottom)}px`;
 
 (async () => {
 	const EasyJS = await EasyJSVersion(1);
@@ -78,11 +76,13 @@ main.style.paddingTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(g
 	closeNav.addEventListener("click", () => {
 		if (nav.getAttribute("data-closed") !== "") {
 			nav.setAttribute("data-closed", "");
-			console.log(nav.style.left = `calc(0px - ${nav.offsetWidth}px + ${closeNav.offsetWidth}px + ${getComputedStyle(closeNav).padding} * 2 + ${getComputedStyle(nav).padding})`);
+			nav.style.left = `calc(0px - ${nav.offsetWidth}px + ${closeNav.offsetWidth}px + ${getComputedStyle(closeNav).padding} * 2 + ${getComputedStyle(nav).padding} * 2)`;
 		}else {
 			nav.removeAttribute("data-closed");
 			nav.style.left = ``;
 		}
-		realign();
+		setTimeout(realign, 1000);
 	});
 })();
+
+if (location.href.indexOf("#") > -1) scrollTo(scrollX, scrollY - Number(getComputedStyle(title).height.split("px")[0]));
