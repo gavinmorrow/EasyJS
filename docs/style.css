@@ -24,7 +24,8 @@ html, body {
 }
 body {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
+	flex-direction: row;
 	overflow: hidden;
 }
 
@@ -104,18 +105,30 @@ h2:hover::after, h2:focus::after {
 	z-index: 2;
 	box-shadow: 0.5vmin 0 1vmin 0 var(--easyjs-inverse-contrastNavBg);
 	width: fit-content;
+	left: 0;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
-	transition: width 1s;
+	transition: left 1s ease-in-out 0s;
+}
+#nav[data-closed] .nav-a:not(#close) {
+	opacity: 0;
+	height: 0;
+	padding: 0;
+}
+#close {
+	border: none;
+	color: var(--easyjs-inverse-text);
+	font: calc(var(--border-radius) * 2) var(--font-family-heading);
+	align-self: flex-end;
 }
 .nav-a {
 	--padding: var(--border-radius);
 	padding: var(--padding);
 	margin: calc(var(--padding) / 2);
-	--transition: transform 0.75s;
+	--transition: transform 0.75s, opacity 1s, height 1s, padding 1s;
 	transition: var(--transition), background-color 1s;
 	display: inline-block;
 	border-radius: var(--padding);
@@ -123,6 +136,7 @@ h2:hover::after, h2:focus::after {
 	color: var(--easyjs-inverse-link);
 	vertical-align: middle;
 	width: fit-content;
+	background-color: transparent;
 }
 .nav-a:hover, .nav-a:focus {
 	transform: rotateY(20deg);
@@ -145,14 +159,15 @@ h2:hover::after, h2:focus::after {
 	text-align: left;
 	position: relative;
 	z-index: 1;
+
+	padding: 0;
+	margin: 0;
+
+	transition: width 1s ease-in-out;
 }
 #main-inner {
 	padding: var(--padding);
 	scroll-behavior: smooth;
-}
-
-.section {
-	
 }
 
 .example {
@@ -161,11 +176,25 @@ h2:hover::after, h2:focus::after {
 	border-radius: var(--border-radius);
 	padding: var(--padding);
 	margin: calc(var(--padding) / 2) 0;
-
 	display: inline-block;
+	word-wrap: break-word;
+	overflow: scroll;
 }
 .example.block {
 	display: block;
 
 	--statement: rgb(200, 0, 226);
+}
+
+.linkable-link {
+	display: inline-block;
+	transition: opacity 1s, text-decoration-color 1s;
+	margin-left: var(--border-radius);
+	color: var(--easyjs-link);
+	text-decoration-color: transparent;
+
+	
+}
+.linkable-link:hover, .linkable-link:focus {
+	text-decoration-color: var(--easyjs-link);
 }

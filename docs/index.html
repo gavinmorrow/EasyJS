@@ -9,6 +9,7 @@
 </head>
 <body>
 	<nav id="nav">
+		<button id="close" class="nav-a">&lt</button>
 		<a href="#overview-title" class="nav-a">Overview</a>
 		<a href="#canvas-title" class="nav-a">Canvas</a>
 		<a href="#math-title" class="nav-a">Math</a>
@@ -19,10 +20,10 @@
 		<h1 id="title">EasyJS <div id="title-inner"></div> <span>v1.0.0</span></h1>
 		<div id="main-inner">
 			<section id="overview" class="section">
-				<h1 id="overview-title" class="section-title">Overview</h1>
-				<h2 id="what-is-easyjs">What is EasyJS?</h2>
+				<h1 id="overview-title" class="section-title linkable">Overview</h1>
+				<h2 id="what-is-easyjs" class="linkable">What is EasyJS?</h2>
 				<div>EasyJS is a JavaScript library for simplifying your code. </div>
-				<h2 id="try-easyjs">Try EasyJS</h2>
+				<h2 id="try-easyjs" class="linkable">Try EasyJS</h2>
 				To try EasyJS, just import it to your site with just a few lines of code:
 				<pre class="example block"><code>&ltscript type="module">
 import EasyJSVersion from "http://gavinmorrow.com/easyjs/";
@@ -34,21 +35,21 @@ const EasyJS = new EasyJSVersion(0);
 &lt/script></code></pre>
 			</section>
 			<section id="canvas" class="section" data-text-transform="capitalize">
-				<h1 id="canvas-title" class="section-title">Canvas</h1>
+				<h1 id="canvas-title" class="section-title linkable">Canvas</h1>
 				
 			</section>
 			<section id="math" class="section" data-text-transform="capitalize">
-				<h1 id="math-title" class="section-title">Math</h1>
+				<h1 id="math-title" class="section-title linkable">Math</h1>
 			</section>
 			<section id="string" class="section" data-text-transform="capitalize">
-				<h1 id="string-title" class="section-title">String</h1>
+				<h1 id="string-title" class="section-title linkable">String</h1>
 			</section>
 			<section id="ui" class="section" data-text-transform="uppercase">
-				<h1 id="ui-title" class="section-title">UI</h1>
+				<h1 id="ui-title" class="section-title linkable">UI</h1>
 			</section>
 		</div>
 	</article>
 	
-	<script src="script.js" type="module" ></script>
+	<script src="script.js" type="module"></script>
 </body>
 </html>
