@@ -12,8 +12,15 @@ const titleBoxShadowSet = () => {
 };
 const pxToNum = px => Number(px.split("px")[0]);
 
-realign();
-addEventListener("resize", realign);
+const realignAll = () => {
+	realign();
+	for (const a of document.querySelectorAll(".nav-a")) {
+		a.style.width = `${getComputedStyle(a).width}`;
+		a.style.height = `${getComputedStyle(a).height}`;
+	}
+}
+realignAll();
+addEventListener("resize", realignAll);
 
 titleBoxShadowSet();
 main.addEventListener("scroll", titleBoxShadowSet);
@@ -52,8 +59,6 @@ main.style.marginTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(ge
 			scrollUpdate();
 			a.blur();
 		});
-		a.style.width = `${getComputedStyle(a).width}`;
-		a.style.height = `${getComputedStyle(a).height}`;
 	}
 
 	for (const linkable of document.querySelectorAll(".linkable")) {
@@ -76,7 +81,13 @@ main.style.marginTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(ge
 	}
 
 	closeNav.addEventListener("click", async () => {
-		if (nav.getAttribute("data-closed") !== "") nav.setAttribute("data-closed", "");
+		if (nav.getAttribute("data-closed") !== "") {
+			// for (const a of document.querySelectorAll(".nav-a")) {
+			// 	a.style.width = `${getComputedStyle(a).width}`;
+			// 	a.style.height = `${getComputedStyle(a).height}`;
+			// }
+			nav.setAttribute("data-closed", "");
+		}
 		else nav.removeAttribute("data-closed");
 		for (let i = 0; i < 1000; i++) {
 			realign();

@@ -115,7 +115,7 @@ h2:hover::after, h2:focus::after {
 	transition: left 1s, padding 1s;
 }
 #nav[data-closed] {
-	padding: 0;
+	padding: var(--border-radius) 0;
 	max-width: 25vw;
 }
 #nav[data-closed] .nav-a:not(#close) {
@@ -149,7 +149,8 @@ h2:hover::after, h2:focus::after {
 	width: fit-content;
 	height: fit-content;
 	background-color: transparent;
-	overflow: scroll;
+	overflow: visible;
+	box-sizing: content-box;
 }
 .nav-a:hover, .nav-a:focus {
 	transform: rotateY(20deg);
