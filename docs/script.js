@@ -80,13 +80,7 @@ main.style.marginTop = `calc(${getComputedStyle(title).fontSize} + ${getComputed
 	}
 
 	closeNav.addEventListener("click", async () => {
-		if (nav.getAttribute("data-closed") !== "") {
-			// for (const a of document.querySelectorAll(".nav-a")) {
-			// 	a.style.width = `${getComputedStyle(a).width}`;
-			// 	a.style.height = `${getComputedStyle(a).height}`;
-			// }
-			nav.setAttribute("data-closed", "");
-		}
+		if (nav.getAttribute("data-closed") !== "") nav.setAttribute("data-closed", "");
 		else nav.removeAttribute("data-closed");
 		for (let i = 0; i < 1000; i++) {
 			realign();
