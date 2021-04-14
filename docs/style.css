@@ -101,7 +101,7 @@ h2:hover::after, h2:focus::after {
 
 #nav {
 	font-size: x-large;
-	padding: 1em;
+	padding: var(--border-radius);
 	position: relative;
 	z-index: 2;
 	box-shadow: 0.5vmin 0 1vmin 0 var(--easyjs-inverse-contrastNavBg);
@@ -125,6 +125,9 @@ h2:hover::after, h2:focus::after {
 	padding: 0 !important;
 	background-color: transparent !important;
 	color: var(--easyjs-inverse-link);
+}
+#nav[data-closed] #close {
+	transform: scale(-1, 1);
 }
 #close {
 	border: none;
