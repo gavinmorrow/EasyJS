@@ -52,6 +52,8 @@ main.style.marginTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(ge
 			scrollUpdate();
 			a.blur();
 		});
+		a.style.width = `${getComputedStyle(a).width}`;
+		a.style.height = `${getComputedStyle(a).height}`;
 	}
 
 	for (const linkable of document.querySelectorAll(".linkable")) {
@@ -73,16 +75,12 @@ main.style.marginTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(ge
 		hideLink();
 	}
 
-	closeNav.addEventListener("click", () => {
-		if (nav.getAttribute("data-closed") !== "") {
-			nav.setAttribute("data-closed", "");
-			// nav.style.left = `calc(0px - ${nav.offsetWidth}px + ${closeNav.offsetWidth}px + ${getComputedStyle(closeNav).padding} * 2 + ${getComputedStyle(nav).padding} * 2)`;
-		}else {
-			nav.removeAttribute("data-closed");
-			nav.style.left = ``;
+	closeNav.addEventListener("click", async () => {
+		if (nav.getAttribute("data-closed") !== "") nav.setAttribute("data-closed", "");
+		else nav.removeAttribute("data-closed");
+		for (let i = 0; i < 1000; i++) {
+			realign();
+			await new Promise(r => setTimeout(r));
 		}
-		setTimeout(realign, 1000);
 	});
 })();
-
-if (location.href.indexOf("#") > -1) scrollTo(scrollX, scrollY - Number(getComputedStyle(title).height.split("px")[0]));
