@@ -76,7 +76,7 @@ main.style.marginTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(ge
 	closeNav.addEventListener("click", () => {
 		if (nav.getAttribute("data-closed") !== "") {
 			nav.setAttribute("data-closed", "");
-			nav.style.left = `calc(0px - ${nav.offsetWidth}px + ${closeNav.offsetWidth}px + ${getComputedStyle(closeNav).padding} * 2 + ${getComputedStyle(nav).padding} * 2)`;
+			// nav.style.left = `calc(0px - ${nav.offsetWidth}px + ${closeNav.offsetWidth}px + ${getComputedStyle(closeNav).padding} * 2 + ${getComputedStyle(nav).padding} * 2)`;
 		}else {
 			nav.removeAttribute("data-closed");
 			nav.style.left = ``;
