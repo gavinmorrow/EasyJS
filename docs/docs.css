@@ -11,7 +11,8 @@
 	font-size: larger;
 }
 .section-title:hover, .section-title:focus {
-	background-color: var(--easyjs-buttonBg);
+	/* Add this when you can collapse sections. */
+	/* background-color: var(--easyjs-buttonBg); */
 }
 
 h2 {
