@@ -10,7 +10,6 @@ const titleBoxShadowSet = () => {
 	if (main.scrollTop > 0) title.style.boxShadow = "0 0 1vmin 0 var(--easyjs-text)";
 	else title.style.boxShadow = "0 0 0.25vmin 0 var(--easyjs-text)";
 };
-const pxToNum = px => Number(px.split("px")[0]);
 
 const realignAll = () => {
 	realign();
