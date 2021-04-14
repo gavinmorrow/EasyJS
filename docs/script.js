@@ -25,7 +25,7 @@ addEventListener("resize", realignAll);
 titleBoxShadowSet();
 main.addEventListener("scroll", titleBoxShadowSet);
 
-main.style.marginTop = `${pxToNum(getComputedStyle(title).fontSize) + pxToNum(getComputedStyle(title).paddingTop) + pxToNum(getComputedStyle(title).paddingBottom)}px`;
+main.style.marginTop = `calc(${getComputedStyle(title).fontSize} + ${getComputedStyle(title).padding} * 2 + ${getComputedStyle(main).padding} * 2 + ${getComputedStyle(main).fontSize})`;
 
 (async () => {
 	const EasyJS = await EasyJSVersion(1);
