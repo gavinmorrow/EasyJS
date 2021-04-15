@@ -83,24 +83,6 @@ h2:hover::after, h2:focus::after {
 .example.block {
 	display: block;
 }
-.example::before {
-	--size: calc(var(--border-radius) * 4);
-	content: " ";
-	background-image: url(http://gavinmorrow.com/imgs/copy.svg);
-	background-position: center;
-	background-size: contain;
-	display: block;
-	width: var(--size);
-	height: var(--size);
-	position: absolute;
-	--margin: calc(var(--size) - var(--border-radius) * 2); 
-	right: var(--margin);
-	opacity: 0;
-	transition: opacity 0.5s;
-}
-.example:focus::before, .example:hover::before {
-	opacity: 0.75;
-}
 
 .linkable-link {
 	display: inline-block;
