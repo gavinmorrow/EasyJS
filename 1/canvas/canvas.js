@@ -1,10 +1,10 @@
 // © 2021 Gavin Morrow
 // EasyJS Canvas
 
-import pointGraph from "./pointGraph/index.js";
+import lineGraph from "./lineGraph/index.js";
 
 const canvas = {
-	lineGraph: pointGraph,
+	lineGraph,
 };
 
 export default canvas;

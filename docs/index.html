@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="nav.css">
 	<link rel="stylesheet" href="docs.css">
+	<link rel="stylesheet" href="highlighting.css">
 </head>
 <body>
 	<nav id="nav">
@@ -27,27 +28,28 @@
 				<div>EasyJS is a JavaScript library for simplifying your code. </div>
 				<h2 id="try-easyjs" class="linkable">Try EasyJS</h2>
 				To try EasyJS, just add it to your page with just a few lines of code:
-				<code class="example block">&ltscript type="module">
-import EasyJSVersion from "http://gavinmorrow.com/easyjs/";
+				<code class="example block"><span class="tag">&ltscript</span> <span class="attribute">type</span>=<span class="value">"module"</span><span class="tag">></span>
+<span class="keyword">import</span> <span class="variable">EasyJSVersion</span> <span class="keyword">from</span> <span class="string">"http://gavinmorrow.com/easyjs/"</span>;
 
-// You can set the version number (below) to any valid major version. 
-const EasyJS = new EasyJSVersion(1); // This is the actual EasyJS interface. 
+<span class="comment">// You can set the version number (below) to any valid major version. </span>
+<span class="declaration">const</span> <span class="constant">EasyJS</span> = <span class="declaration">new</span> <span class="function">EasyJSVersion</span>(<span class="number">1</span>); <span class="comment">// This is the actual EasyJS interface. </span>
 
-// Your code here!
-&lt/script></code>
+<span class="comment">// Your code here!</span>
+<span class="tag">&lt/script></span></code>
 				You can also import individual sections or functions/APIs, but there will be more on that later. 
 			</section>
 			<section id="canvas" class="section" data-text-transform="capitalize">
 				<h1 id="canvas-title" class="section-title linkable">Canvas</h1>
 				<h2 id="link-canvas" class="linkable">Try Canvas!</h2>
 				To try the EasyJS Canvas API, just add it to your page with just a few lines of code:
-				<code class="example block">&ltscript type="module">
-import EasyJSCanvas from "http://gavinmorrow.com/easyjs/1/canvas/";
-// You can set the version number (above) to any valid major version. 
+				<code class="example block"><span class="tag">&ltscript</span> <span class="attribute">type</span>=<span class="value">"module"</span><span class="tag">></span>
+<span class="keyword">import</span> <span class="variable">EasyJSVersion</span> <span class="keyword">from</span> <span class="string">"http://gavinmorrow.com/easyjs/1/canvas/"</span>;
+<span class="comment">// You can set the version number (above) to any valid major version.</span> 
 
-// Your code here!
-&lt/script></code>
-				<h2 id="point-graph" class="linkable">Point Graph</h2>
+<span class="comment">// Your code here!</span>
+<span class="tag">&lt/script></span></code>
+				<h2 id="line-graph" class="linkable">Line Graph</h2>
+				The Line Graph API helps you make a line graph on the HTML canvas. 
 			</section>
 			<section id="math" class="section" data-text-transform="capitalize">
 				<h1 id="math-title" class="section-title linkable">Math</h1>

@@ -1,0 +1,51 @@
+.example {
+	/* JavaScript */
+	--keyword: rgb(189, 46, 225);
+	--variable: rgb(19, 34, 137);
+	--function: rgb(121, 101, 57);
+	--constant: rgb(44, 137, 204);
+	--declaration: rgb(30, 39, 255);
+	--number: rgb(101, 179, 150);
+	--string: rgb(168, 34, 34);
+
+	/* HTML */
+	--tag: rgb(145, 22, 22);
+	--attribute: rgb(255, 43, 43);
+	--value: rgb(66, 66, 255);
+
+	/* All */
+	--comment: rgb(8, 132, 8);
+}
+.example .keyword {
+	color: var(--keyword);
+}
+.example .variable {
+	color: var(--variable);
+}
+.example .function {
+	color: var(--function);
+}
+.example .constant {
+	color: var(--constant);
+}
+.example .declaration {
+	color: var(--declaration);
+}
+.example .number {
+	color: var(--number);
+}
+.example .string {
+	color: var(--string);
+}
+.example .tag {
+	color: var(--tag);
+}
+.example .attribute {
+	color: var(--attribute);
+}
+.example .value {
+	color: var(--value);
+}
+.example .comment {
+	color: var(--comment);
+}

@@ -71,7 +71,7 @@ h2:hover::after, h2:focus::after {
 }
 
 .example {
-	background-color: var(--easyjs-cardBg);
+	background-color: var(--easyjs-navBg);
 	--padding: var(--border-radius);
 	border-radius: var(--border-radius);
 	padding: var(--padding);
@@ -101,4 +101,13 @@ h2:hover::after, h2:focus::after {
 }
 .linkable-link:hover, .linkable-link:focus {
 	text-decoration-color: var(--easyjs-link);
+}
+
+:is(.linkable):target {
+	animation: highlight 6s linear 0s 1 normal none;
+}
+@keyframes highlight {
+	from {}
+	50% { background-color: var(--easyjs-alertBg) }
+	to {}
 }

@@ -8,6 +8,7 @@ const lightColors = {
 	cardBg: "#efeeef",
 	buttonBg: "#e0e1e0",
 	divideBg: "#2c2c2c",
+	alertBg: "#ffff00",
 
 	text: "#131012",
 	subText: "#535353",
@@ -20,6 +21,7 @@ const darkColors = {
 	cardBg: "#303130",
 	buttonBg: "#383938",
 	divideBg: "#d3d3d3",
+	alertBg: "#aaaa00",
 
 	text: "#ecefed",
 	subText: "#acacac",
