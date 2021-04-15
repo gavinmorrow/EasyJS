@@ -3,7 +3,8 @@
 	--padding: var(--border-radius);
 	border-radius: var(--border-radius);
 	padding: var(--padding);
-	transition: background-color 0.75s;
+	transition: background-color 0.75s, box-shadow 1s;
+	box-shadow: 0 0 calc(var(--border-radius) / 8) 0 var(--easyjs-text);
 }
 .section-title::before {
 	content: "EasyJS ";
@@ -13,6 +14,7 @@
 .section-title:hover, .section-title:focus {
 	/* Add this when you can collapse sections. */
 	/* background-color: var(--easyjs-buttonBg); */
+	box-shadow: 0 0 var(--border-radius) 0 var(--easyjs-text);
 }
 
 h2 {
