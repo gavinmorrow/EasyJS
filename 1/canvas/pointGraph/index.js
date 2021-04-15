@@ -1,8 +1,8 @@
 // © 2021 Gavin Morrow
 // EasyJS Canvas
 
-const lineGraph = {
-	LineGraph: class {
+const pointGraph = {
+	PointGraph: class {
 		constructor (canvas, x = 0, y = 0, points = [], draw = true) {
 			this.canvas = canvas;
 			this.ctx = this.canvas.getContext("2d");
@@ -77,4 +77,4 @@ const lineGraph = {
 	}
 };
 
-export default lineGraph;
+export default pointGraph;
