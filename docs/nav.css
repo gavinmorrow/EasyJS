@@ -32,6 +32,9 @@ nav {
 #nav[data-closed] #close {
 	transform: scale(-1, 1);
 }
+#nav[data-closed] #close:hover, #nav[data-closed] #close:focus {
+	transform: scale(-1, 1) rotateY(20deg);
+}
 #close {
 	border: none;
 	color: var(--easyjs-inverse-text);

@@ -13,9 +13,11 @@ const titleBoxShadowSet = () => {
 
 const realignAll = () => {
 	realign();
-	for (const a of document.querySelectorAll(".nav-a")) {
-		a.style.width = `${getComputedStyle(a).width}`;
-		a.style.height = `${getComputedStyle(a).height}`;
+	if (nav.getAttribute("data-closed") !== "") {
+		for (const a of document.querySelectorAll(".nav-a")) {
+			a.style.width = `${getComputedStyle(a).width}`;
+			a.style.height = `${getComputedStyle(a).height}`;
+		}
 	}
 }
 realignAll();
