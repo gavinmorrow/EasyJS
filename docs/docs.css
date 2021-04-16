@@ -73,21 +73,27 @@ h2:hover::after, h2:focus::after {
 .example {
 	background-color: var(--easyjs-light-navBg);
 	--padding: var(--border-radius);
-	border-radius: var(--border-radius);
-	padding: var(--padding);
-	margin: calc(var(--padding) / 2) 0;
-	display: inline-block;
-	word-wrap: break-word;
 	overflow: scroll;
-	box-shadow: 0 0 calc(var(--border-radius) / 8) 0 var(--easyjs-light-text) inset;
-	transition: box-shadow 1s;
+	vertical-align: middle;
+	display: inline-block;
 }
 .example.block {
 	display: block;
 	white-space: pre;
+	box-shadow: 0 0 calc(var(--border-radius) / 8) 0 var(--easyjs-light-text) inset;
+	transition: box-shadow 1s;
+	padding: var(--padding);
+	margin: calc(var(--padding) / 2) 0;
+	border-radius: var(--border-radius);
 }
-.example:hover, .example:focus {
+.example.block:hover, .example.block:focus {
 	box-shadow: 0 0 calc(var(--border-radius) / 2) 0 var(--easyjs-light-text) inset;
+}
+.example:not(.block) {
+	background-color: var(--easyjs-light-cardBg);
+	--padding: calc(var(--border-radius) / 2);
+	padding: var(--padding);
+	border-radius: calc(var(--border-radius) / 2);
 }
 
 .linkable-link {
@@ -96,8 +102,6 @@ h2:hover::after, h2:focus::after {
 	margin-left: var(--border-radius);
 	color: var(--easyjs-link);
 	text-decoration-color: transparent;
-
-	
 }
 .linkable-link:hover, .linkable-link:focus {
 	text-decoration-color: var(--easyjs-link);
