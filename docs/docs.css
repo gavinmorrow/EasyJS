@@ -85,6 +85,7 @@ h2:hover::after, h2:focus::after {
 	padding: var(--padding);
 	margin: calc(var(--padding) / 2) 0;
 	border-radius: var(--border-radius);
+	color: var(--easyjs-light-text);
 }
 .example.block:hover, .example.block:focus {
 	box-shadow: 0 0 calc(var(--border-radius) / 2) 0 var(--easyjs-light-text) inset;
