@@ -6,7 +6,7 @@ const EasyJSVersion = async (v = 1) => {
 		done = false;
 	
 		constructor (v) {
-			const awaiter = async name => await import(`./${v}/${name}/${name}.js`).then(r => r.default);
+			const awaiter = async name => await import(`./${v}/${name}/main.js`).then(r => r.default);
 	
 			(async () => {
 				const divisions = ["canvas", "math", "string", "ui"];
