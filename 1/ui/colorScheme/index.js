@@ -67,6 +67,16 @@ const colorScheme = {
 		};
 	},
 	autoChange: true,
+
+	get colorScheme () {
+		return matchMedia("(prefers-color-scheme: light)") ? "light" : "dark";
+	},
+	get colorSchemeLight () {
+		return this.colorScheme == "light";
+	},
+	get colorSchemeDark () {
+		return this.colorScheme == "dark";
+	},
 };
 
 const update = () => {
