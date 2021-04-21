@@ -29,8 +29,8 @@ const darkColors = {
 }
 
 const colorScheme = {
-	set: light => localStorage.colorScheme = light ? "1" : "",
-	reset: () => localStorage.colorScheme = matchMedia("(prefers-color-scheme: light)").matches ? "1" : "",
+	set: light => localStorage.colorScheme = (light ? "1" : ""),
+	reset: () => localStorage.colorScheme = (matchMedia("(prefers-color-scheme: light)").matches ? "1" : ""),
 	setColors: (light = lightColors, dark = darkColors) => {
 		const colors = [];
 		for (const color in lightColors) {
@@ -68,20 +68,19 @@ const colorScheme = {
 	},
 	autoChange: true,
 
-	get colorScheme () {
+	get scheme () {
 		return matchMedia("(prefers-color-scheme: light)") ? "light" : "dark";
 	},
-	get colorSchemeLight () {
-		return this.colorScheme == "light";
+	get light () {
+		return this.scheme == "light";
 	},
-	get colorSchemeDark () {
-		return this.colorScheme == "dark";
+	get dark () {
+		return this.scheme == "dark";
 	},
 };
 
 const update = () => {
-	if (colorScheme.autoChange)
-		colorScheme.reset();
+	if (colorScheme.autoChange) colorScheme.reset();
 	colorScheme.setColors();
 };
 update();
