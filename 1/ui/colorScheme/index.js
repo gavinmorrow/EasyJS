@@ -69,7 +69,7 @@ const colorScheme = {
 	autoChange: true,
 
 	get scheme () {
-		return matchMedia("(prefers-color-scheme: light)") ? "light" : "dark";
+		return matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
 	},
 	get light () {
 		return this.scheme == "light";
