@@ -26,7 +26,7 @@ class Popup {
 		setTimeout(() => {
 			this.wrapper.style.opacity = "0";
 			setTimeout(() => {
-				this.wrapper.zIndex = "-1000";
+				this.wrapper.style.zIndex = "-1000";
 			}, 1000);
 		}, ms);
 	}
