@@ -28,3 +28,5 @@ class Popup {
 		}, ms);
 	}
 }
+
+export default Popup;
