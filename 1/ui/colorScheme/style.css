@@ -54,6 +54,34 @@
 		--easyjs-dark-contrastNavBg:#858885;
 		--easyjs-light-contrastNavBg:#555855;
 		--easyjs-contrastNavBg:#858885;
-		--easyjs-inverse-contrastNavBg:#555855; --easyjs-dark-cardBg:#303130; --easyjs-light-cardBg:#efeeef; --easyjs-cardBg:#303130; --easyjs-inverse-cardBg:#efeeef; --easyjs-dark-buttonBg:#383938; --easyjs-light-buttonBg:#e0e1e0; --easyjs-buttonBg:#383938; --easyjs-inverse-buttonBg:#e0e1e0; --easyjs-dark-divideBg:#d3d3d3; --easyjs-light-divideBg:#2c2c2c; --easyjs-divideBg:#d3d3d3; --easyjs-inverse-divideBg:#2c2c2c; --easyjs-dark-alertBg:#aaaa00; --easyjs-light-alertBg:#ffff00; --easyjs-alertBg:#aaaa00; --easyjs-inverse-alertBg:#ffff00; --easyjs-dark-text:#ecefed; --easyjs-light-text:#131012; --easyjs-text:#ecefed; --easyjs-inverse-text:#131012; --easyjs-dark-subText:#acacac; --easyjs-light-subText:#535353; --easyjs-subText:#acacac; --easyjs-inverse-subText:#535353; --easyjs-dark-link:#adddad; --easyjs-light-link:#0000ff; --easyjs-link:#adddad; --easyjs-inverse-link:#0000ff;
+		--easyjs-inverse-contrastNavBg:#555855;
+		--easyjs-dark-cardBg:#303130;
+		--easyjs-light-cardBg:#efeeef;
+		--easyjs-cardBg:#303130;
+		--easyjs-inverse-cardBg:#efeeef;
+		--easyjs-dark-buttonBg:#383938;
+		--easyjs-light-buttonBg:#e0e1e0;
+		--easyjs-buttonBg:#383938;
+		--easyjs-inverse-buttonBg:#e0e1e0;
+		--easyjs-dark-divideBg:#d3d3d3;
+		--easyjs-light-divideBg:#2c2c2c;
+		--easyjs-divideBg:#d3d3d3;
+		--easyjs-inverse-divideBg:#2c2c2c;
+		--easyjs-dark-alertBg:#aaaa00;
+		--easyjs-light-alertBg:#ffff00;
+		--easyjs-alertBg:#aaaa00;
+		--easyjs-inverse-alertBg:#ffff00;
+		--easyjs-dark-text:#ecefed;
+		--easyjs-light-text:#131012;
+		--easyjs-text:#ecefed;
+		--easyjs-inverse-text:#131012;
+		--easyjs-dark-subText:#acacac;
+		--easyjs-light-subText:#535353;
+		--easyjs-subText:#acacac;
+		--easyjs-inverse-subText:#535353;
+		--easyjs-dark-link:#adddad;
+		--easyjs-light-link:#0000ff;
+		--easyjs-link:#adddad;
+		--easyjs-inverse-link:#0000ff;
 	}
 }
