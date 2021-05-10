@@ -16,6 +16,9 @@ class Popup {
 
 		this.wrapper = document.createElement("div");
 		this.wrapper.classList.add("easyjs-popup-wrapper");
+
+		this.wrapper.appendChild(this.popup);
+		document.body.appendChild(this.wrapper);
 	}
 	show (ms = this.ms) {
 		this.wrapper.style.zIndex = "1000";
