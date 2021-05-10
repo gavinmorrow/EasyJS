@@ -16,8 +16,14 @@
 }
 .easyjs-popup {
 	text-align: center;
-	color: white;
-	background-color: rgba(0, 0, 0, 0.75);
+	color: var(--easyjs-text);
+	background-color: rgba(255, 255, 255, 0.75);
+	box-shadow: 0 0 var(--border-radius) 0 var(--easyjs-text);
 	padding: var(--border-radius);
 	border-radius: var(--border-radius);
+}
+@media (prefers-color-scheme: dark) {
+	.easyjs-popup {
+		background-color: rgba(0, 0, 0, 0.75);
+	}
 }
