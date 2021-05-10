@@ -23,10 +23,10 @@ class Popup {
 		this.wrapper.appendChild(this.popup);
 		document.body.appendChild(this.wrapper);
 	}
-	show (ms = this.ms) {
+	show (ms = this.ms, del) {
 		this.wrapper.style.zIndex = "1000";
 		this.wrapper.style.opacity = "1";
-		setTimeout(this.hide.bind(this), ms);
+		setTimeout(this.hide.bind(this, del), ms);
 	}
 	hide (del = this.delete) {
 		this.wrapper.style.opacity = "0";
