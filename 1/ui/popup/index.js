@@ -23,12 +23,13 @@ class Popup {
 	show (ms = this.ms) {
 		this.wrapper.style.zIndex = "1000";
 		this.wrapper.style.opacity = "1";
+		setTimeout(this.hide, ms);
+	}
+	hide () {
+		this.wrapper.style.opacity = "0";
 		setTimeout(() => {
-			this.wrapper.style.opacity = "0";
-			setTimeout(() => {
-				this.wrapper.style.zIndex = "-1000";
-			}, 1000);
-		}, ms);
+			this.wrapper.style.zIndex = "-1000";
+		}, 1000);
 	}
 }
 
