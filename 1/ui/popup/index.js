@@ -23,7 +23,7 @@ class Popup {
 	show (ms = this.ms) {
 		this.wrapper.style.zIndex = "1000";
 		this.wrapper.style.opacity = "1";
-		setTimeout(this.hide, ms);
+		setTimeout(this.hide.bind(this), ms);
 	}
 	hide () {
 		this.wrapper.style.opacity = "0";
