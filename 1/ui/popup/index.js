@@ -32,10 +32,10 @@ class Popup {
 		this.wrapper.style.opacity = "0";
 		setTimeout(() => {
 			this.wrapper.style.zIndex = "-1000";
-			if (del) this.delete();
+			if (del) this.remove();
 		}, 1000);
 	}
-	delete () {
+	remove () {
 		return this.wrapper.remove();
 	}
 }
