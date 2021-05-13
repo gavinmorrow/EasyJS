@@ -17,7 +17,7 @@
 .easyjs-popup {
 	text-align: center;
 	color: var(--easyjs-text);
-	background-color: rgba(255, 255, 255, 0.75);
+	background-color: rgba(255, 255, 255, 0.9);
 	box-shadow: 0 0 var(--border-radius) 0 var(--easyjs-text);
 	padding: var(--border-radius);
 	border-radius: var(--border-radius);
