@@ -18,6 +18,7 @@
 	background-color: var(--easyjs-buttonBg);
 	border: none;
 	box-shadow: 0 0 var(--br) 0 transparent;
+	transition: box-shadow 1s;
 }
 #easyjs-cookie-consent-button:hover, #easyjs-cookie-consent-button:focus {
 	box-shadow: 0 0 var(--br) 0 var(--easyjs-subText);
