@@ -1,7 +1,11 @@
-#easyjs-cookie-consent {
-	all: initial;
-	font: initial;
+.easyjs-cookie-consent-elem {
 	--br: var(--border-radius, 1em);
+	all: initial;
+	font: inherit;
+	border-radius: var(--br);
+	padding: var(--br);
+}
+#easyjs-cookie-consent {
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -9,14 +13,11 @@
 	background-color: var(--easyjs-cardBg);
 	box-shadow: 0 0 var(--br) 0 var(--easyjs-subText);
 	color: var(--easyjs-text);
+	border-radius: 0;
 	border-top-left-radius: var(--br);
 	border-top-right-radius: var(--br);
-	padding: var(--br);
 }
 #easyjs-cookie-consent-button {
-	all: initial;
-	font: initial;
-	border-radius: var(--br);
 	background-color: var(--easyjs-buttonBg);
 	border: none;
 	box-shadow: 0 0 var(--br) 0 transparent;

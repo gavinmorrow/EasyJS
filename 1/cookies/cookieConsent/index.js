@@ -10,10 +10,12 @@ const cookieConsent = (txt = "By continuting to use this site, you consent to ou
 		const close = document.createElement("button");
 		close.innerHTML = "Ok";
 		close.id = "easyjs-cookie-consent-button";
+		close.class = "easyjs-cookie-consent-elem";
 
 		const elem = document.createElement("div");
 		elem.innerHTML = txt;
 		elem.id = "easyjs-cookie-consent";
+		elem.class = "easyjs-cookie-consent-elem";
 		elem.appendChild(close);
 
 		document.body.appendChild(elem);
