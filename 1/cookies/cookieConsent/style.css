@@ -4,9 +4,14 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: var(--easyjs-navBg);
+	background-color: var(--easyjs-cardBg);
 	box-shadow: 0 0 var(--br) 0 var(--easyjs-subText);
 	color: var(--easyjs-text);
 	border-top-left-radius: var(--br);
 	border-top-right-radius: var(--br);
+}
+#easyjs-cookie-consent-button {
+	border-radius: var(--br);
+	background-color: var(--easyjs-buttonBg);
+	border: none;
 }
