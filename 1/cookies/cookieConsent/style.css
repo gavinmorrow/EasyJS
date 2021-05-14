@@ -5,6 +5,7 @@
 	font-size: normal;
 	border-radius: var(--br);
 	padding: calc(var(--br) / 2);
+	text-align: center;
 }
 #easyjs-cookie-consent {
 	position: fixed;
