@@ -2,6 +2,7 @@
 	--br: var(--border-radius, 1em);
 	all: initial;
 	font: inherit;
+	font-size: normal;
 	border-radius: var(--br);
 	padding: var(--br);
 }
@@ -20,9 +21,10 @@
 #easyjs-cookie-consent-button {
 	background-color: var(--easyjs-buttonBg);
 	border: none;
-	box-shadow: 0 0 var(--br) 0 transparent;
+	box-shadow: 0 0 var(--br) 0 transparent inset;
 	transition: box-shadow 1s;
+	margin: var(--br);
 }
 #easyjs-cookie-consent-button:hover, #easyjs-cookie-consent-button:focus {
-	box-shadow: 0 0 var(--br) 0 var(--easyjs-subText);
+	box-shadow: 0 0 var(--br) 0 var(--easyjs-subText) inset;
 }
