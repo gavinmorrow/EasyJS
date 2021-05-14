@@ -1,6 +1,6 @@
 // EasyJS Cookies
 
-import cookieConsent from "./cookieConsent";
+import cookieConsent from "./cookieConsent/index.js";
 
 const cookies = {
 	cookieConsent,
