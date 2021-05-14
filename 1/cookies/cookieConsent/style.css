@@ -21,10 +21,10 @@
 #easyjs-cookie-consent-button {
 	background-color: var(--easyjs-buttonBg);
 	border: none;
-	box-shadow: 0 0 calc(var(--br) / 5) 0 var(--easyjs-subText) inset;
+	box-shadow: 0 0 calc(var(--br) / 4) 0 var(--easyjs-subText) inset;
 	transition: box-shadow 1s;
 	margin: var(--br);
 }
 #easyjs-cookie-consent-button:hover, #easyjs-cookie-consent-button:focus {
-	box-shadow: 0 0 var(--br) 0 var(--easyjs-subText) inset;
+	box-shadow: 0 0 calc(var(--br) / 2) 0 var(--easyjs-subText) inset;
 }
