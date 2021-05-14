@@ -4,7 +4,7 @@ import colorScheme from "/EasyJS/1/ui/colorScheme/index.js";
 console.log(colorScheme);
 const elemStyle = document.createElement("link");
 elemStyle.rel = "stylesheet";
-elemStyle.href = "./style.css";
+elemStyle.href = "https://gavinmorrow.github.io/EasyJS/1/cookie/cookieConsent/style.css";
 document.head.appendChild(elemStyle);
 const cookieConsent = (txt = "By continuting to use this site, you consent to our use of cookies.") => {
 	try {
