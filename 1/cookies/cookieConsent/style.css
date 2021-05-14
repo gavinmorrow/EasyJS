@@ -2,7 +2,7 @@
 	--br: var(--border-radius, 1em);
 	all: initial;
 	font: inherit;
-	font-size: small;
+	font-size: smaller;
 	border-radius: var(--br);
 	padding: calc(var(--br) / 1);
 	text-align: center;
