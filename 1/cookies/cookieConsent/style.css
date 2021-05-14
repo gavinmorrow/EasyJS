@@ -18,6 +18,8 @@
 	border-radius: 0;
 	border-top-left-radius: var(--br);
 	border-top-right-radius: var(--br);
+	opacity: 1;
+	transition: opacity 1s;
 }
 #easyjs-cookie-consent-button {
 	background-color: var(--easyjs-buttonBg);

@@ -7,16 +7,21 @@ elemStyle.href = "https://gavinmorrow.github.io/EasyJS/1/cookies/cookieConsent/s
 document.head.appendChild(elemStyle);
 const cookieConsent = (txt = "By continuting to use this site, you consent to our use of cookies.") => {
 	try {
-		const close = document.createElement("button");
-		close.innerHTML = "Ok";
-		close.id = "easyjs-cookie-consent-button";
-		close.classList.add("easyjs-cookie-consent-elem");
-
 		const elem = document.createElement("div");
+		const close = document.createElement("button");
+
 		elem.innerHTML = txt;
 		elem.id = "easyjs-cookie-consent";
 		elem.classList.add("easyjs-cookie-consent-elem");
 		elem.appendChild(close);
+
+		close.innerHTML = "Ok";
+		close.id = "easyjs-cookie-consent-button";
+		close.classList.add("easyjs-cookie-consent-elem");
+		close.addEventListener("click", () => {
+			elem.style.opacity = "0";
+			setTimeout(() => elem.remove(), 1000)
+		});
 
 		document.body.appendChild(elem);
 
