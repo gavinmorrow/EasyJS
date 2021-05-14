@@ -1,8 +1,10 @@
 #easyjs-cookie-consent {
 	--br: var(--border-radius, 1em);
 	position: fixed;
+	left: 0;
+	right: 0;
 	bottom: 0;
-	background-color: var(--easyjs-nav-bg);
+	background-color: var(--easyjs-navBg);
 	box-shadow: 0 0 var(--br) 0 var(--easyjs-subText);
 	color: var(--easyjs-text);
 	border-top-left-radius: var(--br);
