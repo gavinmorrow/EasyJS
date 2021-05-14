@@ -1,5 +1,6 @@
 #easyjs-cookie-consent {
-	all: initial !important;
+	all: initial;
+	font: initial;
 	--br: var(--border-radius, 1em);
 	position: fixed;
 	left: 0;
@@ -13,7 +14,8 @@
 	padding: var(--br);
 }
 #easyjs-cookie-consent-button {
-	all: initial !important;
+	all: initial;
+	font: initial;
 	border-radius: var(--br);
 	background-color: var(--easyjs-buttonBg);
 	border: none;
