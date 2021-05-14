@@ -9,9 +9,14 @@
 	color: var(--easyjs-text);
 	border-top-left-radius: var(--br);
 	border-top-right-radius: var(--br);
+	padding: var(--br);
 }
 #easyjs-cookie-consent-button {
 	border-radius: var(--br);
 	background-color: var(--easyjs-buttonBg);
 	border: none;
+	box-shadow: 0 0 var(--br) 0 transparent;
+}
+#easyjs-cookie-consent-button:hover, #easyjs-cookie-consent-button:focus {
+	box-shadow: 0 0 var(--br) 0 var(--easyjs-subText);
 }
