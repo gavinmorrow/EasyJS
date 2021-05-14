@@ -4,7 +4,7 @@
 	font: inherit;
 	font-size: normal;
 	border-radius: var(--br);
-	padding: var(--br);
+	padding: calc(var(--br) / 2);
 }
 #easyjs-cookie-consent {
 	position: fixed;
@@ -21,7 +21,7 @@
 #easyjs-cookie-consent-button {
 	background-color: var(--easyjs-buttonBg);
 	border: none;
-	box-shadow: 0 0 var(--br) 0 transparent inset;
+	box-shadow: 0 0 calc(var(--br) / 5) 0 var(--easyjs-subText) inset;
 	transition: box-shadow 1s;
 	margin: var(--br);
 }
