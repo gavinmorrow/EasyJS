@@ -1,11 +1,11 @@
 // EasyJS Cookies
 
 import cookieConsent from "./cookieConsent/index.js";
-import interface from "./interface/index.js";
+import Cookie from "./interface/index.js";
 
 const cookies = {
 	cookieConsent,
-	interface,
+	Cookie,
 };
 
 export default cookies;

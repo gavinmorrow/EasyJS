@@ -1,7 +1,7 @@
 // EasyJS Cookies
 
-const interface = {
+class Cookie {
 	
 };
 
-export default interface;
+export default Cookie;
