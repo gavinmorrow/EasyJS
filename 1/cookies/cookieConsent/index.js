@@ -1,6 +1,6 @@
 // EasyJS Cookies
 
-import Cookie from "../interface/index.js";
+import Cookie from "../cookie/index.js";
 const elemStyle = document.createElement("link");
 elemStyle.rel = "stylesheet";
 elemStyle.href = "https://gavinmorrow.github.io/EasyJS/1/cookies/cookieConsent/style.css";
