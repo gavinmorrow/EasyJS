@@ -1,7 +1,7 @@
 // EasyJS Cookies
 
 class Cookie {
-	static cookies = {}
+	static cookies = {};
 	constructor (name, value = "", expires = "", path = "/") {
 		this.name = name;
 		this.txt = value;
