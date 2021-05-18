@@ -1,4 +1,5 @@
 .easyjs-popup-wrapper {
+	--br: var(--border-radius, 0.5em);
 	all: initial;
 	position: fixed;
 	top: 0;
@@ -10,8 +11,8 @@
 	z-index: -1000;
 	transition: opacity 1s;
 	opacity: 0;
-	display: flex;
 
+	display: flex;
 	justify-content: center;
 	align-items: center;
 
@@ -22,9 +23,9 @@
 	text-align: center;
 	color: var(--easyjs-text);
 	background-color: rgba(255, 255, 255, 0.9);
-	box-shadow: 0 0 var(--border-radius) 0 var(--easyjs-text);
-	padding: var(--border-radius);
-	border-radius: var(--border-radius);
+	box-shadow: 0 0 var(--br) 0 var(--easyjs-text);
+	padding: var(--br);
+	border-radius: var(--br);
 	width: fit-content;
 	height: fit-content;
 }
