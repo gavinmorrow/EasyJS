@@ -16,10 +16,12 @@
 	justify-content: center;
 	align-items: center;
 
-	font: large inherit;
+	font-size: large;
+	font-family: inherit;
 }
 .easyjs-popup {
 	all: inherit;
+	display: block;
 	text-align: center;
 	color: var(--easyjs-text);
 	background-color: rgba(255, 255, 255, 0.9);
