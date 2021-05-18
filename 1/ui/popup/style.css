@@ -23,6 +23,8 @@
 	box-shadow: 0 0 var(--border-radius) 0 var(--easyjs-text);
 	padding: var(--border-radius);
 	border-radius: var(--border-radius);
+	width: fit-content;
+	height: fit-content;
 }
 @media (prefers-color-scheme: dark) {
 	.easyjs-popup {
