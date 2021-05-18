@@ -8,7 +8,7 @@ document.head.appendChild(elemStyle);
 let i = 0;
 const cookieConsent = (txt = "By continuting to use this site, you consent to our use of cookies.") => {
 	const cookie = new Cookie(`easyjs-cookie-consent-${++i}`, "0");
-	if (Cookie.cookies["easyjs-cookie-consent"].value !== "1") {
+	if (cookie.value !== "1") {
 		try {
 			const elem = document.createElement("div");
 			const close = document.createElement("button");
