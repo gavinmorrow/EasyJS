@@ -1,7 +1,7 @@
 // EasyJS Cookies
 
 class Cookie {
-	static get get (name) {
+	static get (name) {
 		const or = (a, b) => (a === undefined || a === null) ? b : a;
 		const getValue = name => {
 			const match = new RegExp(`${name}=([^;]*);`).exec(document.cookie);
