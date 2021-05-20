@@ -36,8 +36,8 @@ class Popup {
 		return new Promise(async resolve => {
 			this.wrapper.style.zIndex = "1000";
 			this.wrapper.style.opacity = "1";
-			await sleep(1000);
-			setTimeout(this.hide.bind(this, del), ms);
+			await sleep(1000 + ms);
+			this.hide(del);
 			resolve(true);
 		});
 	}
