@@ -21,7 +21,6 @@ class Cookie {
 		this.path = path;
 
 		this.value = this.txt;
-		Cookie.cookies[this.name] = this;
 	}
 	get value () {
 		return this.txt;
