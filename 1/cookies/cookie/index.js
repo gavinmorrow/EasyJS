@@ -4,7 +4,7 @@ class Cookie {
 	static get (name) {
 		const or = (a, b) => (a === undefined || a === null) ? b : a;
 		const getValue = name => {
-			const match = new RegExp(`${name}=([^;]*);`).exec(document.cookie);
+			const match = new RegExp(`${name}=([^;]*);?`).exec(document.cookie);
 			if (match) return or(match[1], null);
 			else return null;
 		}
