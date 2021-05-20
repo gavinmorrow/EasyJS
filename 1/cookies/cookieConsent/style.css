@@ -23,6 +23,7 @@
 	transition: opacity 1s;
 }
 #easyjs-cookie-consent-button {
+	color: var(--easyjs-text);
 	background-color: var(--easyjs-buttonBg);
 	border: none;
 	box-shadow: 0 0 calc(var(--br) / 4) 0 var(--easyjs-subText) inset;
