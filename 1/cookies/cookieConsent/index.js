@@ -7,7 +7,7 @@ elemStyle.href = "https://gavinmorrow.github.io/EasyJS/1/cookies/cookieConsent/s
 document.head.appendChild(elemStyle);
 let i = 0;
 const cookieConsent = (txt = "By continuting to use this site, you consent to our use of cookies.") => {
-	const cookie = new Cookie(`easyjs-cookie-consent`, "0");
+	const cookie = Cookie.cookies["easyjs-cookie-consent"] || new Cookie(`easyjs-cookie-consent`, "0");
 	if (cookie.value !== "1") {
 		try {
 			const elem = document.createElement("div");
