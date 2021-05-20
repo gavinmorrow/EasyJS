@@ -5,7 +5,7 @@ popupStyle.rel = "stylesheet";
 popupStyle.href = "https://gavinmorrow.github.io/EasyJS/1/ui/popup/style.css";
 document.head.appendChild(popupStyle);
 
-const sleep = (ms) => {
+const sleep = async (ms) => {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -30,8 +30,8 @@ class Popup {
 	async show (ms = this.ms, del) {
 		this.wrapper.style.zIndex = "1000";
 		this.wrapper.style.opacity = "1";
-		setTimeout(this.hide.bind(this, del), ms);
 		await sleep(1000);
+		setTimeout(this.hide.bind(this, del), ms);
 		return true;
 	}
 	async hide (del = this.delete) {
