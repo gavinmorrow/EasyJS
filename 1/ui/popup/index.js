@@ -28,11 +28,6 @@ class Popup {
 		document.body.appendChild(this.wrapper);
 	}
 	async show (ms = this.ms, del) {
-		// this.wrapper.style.zIndex = "1000";
-		// this.wrapper.style.opacity = "1";
-		// await sleep(1000);
-		// setTimeout(this.hide.bind(this, del), ms);
-		// return true;
 		return new Promise(async resolve => {
 			this.wrapper.style.zIndex = "1000";
 			this.wrapper.style.opacity = "1";
@@ -42,11 +37,6 @@ class Popup {
 		});
 	}
 	async hide (del = this.delete) {
-		// this.wrapper.style.opacity = "0";
-		// await sleep(1000);
-		// this.wrapper.style.zIndex = "-1000";
-		// if (del) this.remove();
-		// return true;
 		return new Promise(async resolve => {
 			this.wrapper.style.opacity = "0";
 			await sleep(1000);

@@ -8,6 +8,7 @@ document.head.appendChild(elemStyle);
 let i = 0;
 const cookieConsent = (txt = "By continuting to use this site, you consent to our use of cookies.") => {
 	const cookie = Cookie.get("easyjs-cookie-consent") || new Cookie(`easyjs-cookie-consent`, "0");
+	console.log(cookie);
 	if (cookie.value !== "1") {
 		try {
 			const elem = document.createElement("div");
