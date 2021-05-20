@@ -5,6 +5,10 @@ popupStyle.rel = "stylesheet";
 popupStyle.href = "https://gavinmorrow.github.io/EasyJS/1/ui/popup/style.css";
 document.head.appendChild(popupStyle);
 
+const sleep = (ms) => {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 class Popup {
 	constructor (txt, ms = 5000, del = false) {
 		this.txt = txt;
@@ -23,17 +27,19 @@ class Popup {
 		this.wrapper.appendChild(this.popup);
 		document.body.appendChild(this.wrapper);
 	}
-	show (ms = this.ms, del) {
+	async show (ms = this.ms, del) {
 		this.wrapper.style.zIndex = "1000";
 		this.wrapper.style.opacity = "1";
 		setTimeout(this.hide.bind(this, del), ms);
+		await sleep(1000);
+		return true;
 	}
-	hide (del = this.delete) {
+	async hide (del = this.delete) {
 		this.wrapper.style.opacity = "0";
-		setTimeout(() => {
-			this.wrapper.style.zIndex = "-1000";
-			if (del) this.remove();
-		}, 1000);
+		await sleep(1000);
+		this.wrapper.style.zIndex = "-1000";
+		if (del) this.remove();
+		return true;
 	}
 	remove () {
 		return this.wrapper.remove();
