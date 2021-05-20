@@ -9,9 +9,9 @@ class Cookie {
 			else return null;
 		}
 		if (match) {
-			const value   = or(getValue(name), "");
+			const value = or(getValue(name), "");
 			const expires = or(getValue(`${name}-expires`), "");
-			const path    = or(getValue(`${name}-path`), "/");
+			const path = or(getValue(`${name}-path`), "/");
 			return new Cookie(name, value, expires, path);
 		}
 		return null;
