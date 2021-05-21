@@ -1,6 +1,8 @@
 // © 2021 Gavin Morrow
 // EasyJS UI
 
+if (document.documentElement.style.getPropertyValue(`--easyjs-bg`).length > 0) throw new Error("EasyJS UI Color Scheme aready loaded.");
+
 const lightColors = {
 	bg: "#ffffff",
 	navBg: "#fefffe",
