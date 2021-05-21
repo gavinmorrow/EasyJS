@@ -19,7 +19,7 @@ class Popup {
 		this.popup = document.createElement("div");
 		this.popup.classList.add("easyjs-popup");
 		this.popup.innerHTML = this.txt;
-		this.id = id;
+		this.popup.id = this.id;
 
 		this.wrapper = document.createElement("div");
 		this.wrapper.classList.add("easyjs-popup-wrapper");
