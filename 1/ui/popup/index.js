@@ -29,7 +29,7 @@ class Popup {
 		this.wrapper.appendChild(this.popup);
 		document.body.appendChild(this.wrapper);
 	}
-	async show (ms = this.ms, del) {
+	show (ms = this.ms, del) {
 		return new Promise(async resolve => {
 			this.wrapper.style.zIndex = "1000";
 			this.wrapper.style.opacity = "1";
@@ -38,7 +38,7 @@ class Popup {
 			resolve(true);
 		});
 	}
-	async hide (del = this.delete) {
+	hide (del = this.delete) {
 		return new Promise(async resolve => {
 			this.wrapper.style.opacity = "0";
 			await sleep(1000);
