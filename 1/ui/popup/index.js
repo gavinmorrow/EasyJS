@@ -5,7 +5,7 @@ popupStyle.rel = "stylesheet";
 popupStyle.href = "https://gavinmorrow.github.io/EasyJS/1/ui/popup/style.css";
 document.head.appendChild(popupStyle);
 
-const sleep = async (ms) => {
+const sleep = (ms) => {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
