@@ -10,14 +10,16 @@ const sleep = async (ms) => {
 }
 
 class Popup {
-	constructor (txt, ms = 5000, del = false) {
+	constructor (txt, ms = 5000, del = false, id = "") {
 		this.txt = txt;
 		this.ms = ms;
 		this.delete = del;
+		this.id = id;
 
 		this.popup = document.createElement("div");
 		this.popup.classList.add("easyjs-popup");
 		this.popup.innerHTML = this.txt;
+		this.id = id;
 
 		this.wrapper = document.createElement("div");
 		this.wrapper.classList.add("easyjs-popup-wrapper");
