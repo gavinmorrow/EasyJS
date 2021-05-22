@@ -31,7 +31,7 @@ class Popup {
 	}
 	show (ms = this.ms, del) {
 		return new Promise(async resolve => {
-			this.wrapper.style.zIndex = "1000";
+			this.wrapper.style.zIndex = "100000000000000000000000000000";
 			this.wrapper.style.opacity = "1";
 			await sleep(1000 + ms);
 			this.hide(del);
