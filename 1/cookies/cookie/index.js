@@ -8,13 +8,10 @@ class Cookie {
 			if (match) return or(match[1], null);
 			else return null;
 		}
-		if (getValue(name) !== null) {
-			const value = or(getValue(name), "");
-			const expires = or(getValue(`${name}-expires`), "");
-			const path = or(getValue(`${name}-path`), "/");
-			return new Cookie(name, value, expires, path);
-		}
-		return null;
+		const value = or(getValue(name), "");
+		const expires = or(getValue(`${name}-expires`), "");
+		const path = or(getValue(`${name}-path`), "/");
+		return new Cookie(name, value, expires, path);
 	};
 	constructor (name, value = "", expires = "", path = "/") {
 		this.name = name;
