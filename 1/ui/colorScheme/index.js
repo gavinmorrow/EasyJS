@@ -31,11 +31,11 @@ const darkColors = {
 }
 
 const colorScheme = {
-	set: light => {
+	set: function (light) {
 		localStorage.colorScheme = (light ? "1" : "");
 		this.setColors();
 	},
-	reset: () => {
+	reset: function () {
 		localStorage.colorScheme = (matchMedia("(prefers-color-scheme: light)").matches ? "1" : "");
 		this.setColors();
 	},
