@@ -1,0 +1,69 @@
+nav {
+	background-color: var(--easyjs-contrastNavBg);
+}
+
+#nav {
+	font-size: x-large;
+	padding: var(--border-radius);
+	position: relative;
+	z-index: 2;
+	box-shadow: 0.5vmin 0 1vmin 0 var(--easyjs-inverse-contrastNavBg);
+	width: fit-content;
+	left: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	transition: left 1s, padding 1s;
+}
+#nav[data-closed] {
+	padding: var(--border-radius) 0;
+	max-width: 25vw;
+}
+#nav[data-closed] .nav-a:not(#close) {
+	opacity: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+	padding: 0 !important;
+	background-color: transparent !important;
+	color: var(--easyjs-inverse-link);
+}
+#nav[data-closed] #close {
+	transform: scale(-1, 1);
+}
+#nav[data-closed] #close:hover, #nav[data-closed] #close:focus {
+	transform: scale(-1, 1) rotateY(20deg);
+}
+#close {
+	border: none;
+	color: var(--easyjs-inverse-text);
+	font: calc(var(--border-radius) * 2) var(--font-family-heading);
+	align-self: flex-end;
+}
+.nav-a {
+	--padding: var(--border-radius);
+	padding: var(--padding);
+	margin: calc(var(--padding) / 2);
+	--transition: transform 0.75s, opacity 1s, width 1s, height 1s, padding 1s, color 1s;
+	transition: var(--transition), background-color 1s;
+	display: inline-block;
+	border-radius: var(--padding);
+	text-decoration: none;
+	color: var(--easyjs-inverse-link);
+	vertical-align: middle;
+	width: fit-content;
+	height: fit-content;
+	background-color: transparent;
+	overflow: visible;
+	box-sizing: content-box;
+}
+.nav-a:hover, .nav-a:focus {
+	transform: rotateY(20deg);
+	background-color: var(--easyjs-inverse-buttonBg);
+}
+.nav-a.here {
+	background-color: var(--easyjs-buttonBg);
+	color: var(--easyjs-text);
+	transition: var(--transition), background-color 0.5s;
+}
