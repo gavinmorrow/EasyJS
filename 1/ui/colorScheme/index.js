@@ -40,20 +40,30 @@ const colorScheme = {
 		}
 
 		const setVar = (name, value) => document.documentElement.style.setProperty(`--easyjs-${name}`, `${value}`);
+		const htr = hex => hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i,(m, r, g, b) => '#' + r + r + g + g + b + b).substring(1).match(/.{2}/g).map(x => parseInt(x, 16)).join(", ");
 		for (const color of colors) {
 			lightColors[color] = light[color] || lightColors[color];
 			darkColors[color] = dark[color] || darkColors[color];
 
 			setVar(`dark-${color}`, darkColors[color]);
 			setVar(`light-${color}`, lightColors[color]);
+
+			setVar(`rgb-dark-${color}`, htr(darkColors[color]));
+			setVar(`rgb-light-${color}`, htr(lightColors[color]));
 			switch (localStorage.colorScheme) {
 				case "1":
 					setVar(color, lightColors[color]);
 					setVar(`inverse-${color}`, darkColors[color]);
+
+					setVar(`rgb-${color}`, htr(lightColors[color]));
+					setVar(`rgb-inverse-${color}`, htr(darkColors[color]));
 					break;
 				case "":
 					setVar(color, darkColors[color]);
 					setVar(`inverse-${color}`, lightColors[color]);
+
+					setVar(`rgb-${color}`, htr(darkColors[color]));
+					setVar(`rgb-inverse-${color}`, htr(lightColors[color]));
 					break;
 				default:
 					throw new Error(`EasyJS UI Color Scheme colorScheme property is invalid. \n\nValue: "${localStorage.colorScheme}"`);
