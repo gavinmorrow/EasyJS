@@ -1,4 +1,4 @@
-@import "/EasyJS/1/ui/colorScheme/index.js";
+@import "/EasyJS/1/ui/colorScheme/style.css";
 .easyjs-cookie-consent-elem {
 	--br: var(--border-radius, 1em);
 	all: initial;
