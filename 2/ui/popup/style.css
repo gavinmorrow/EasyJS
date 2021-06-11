@@ -30,6 +30,9 @@
 	border-radius: var(--br);
 	width: fit-content;
 	height: fit-content;
+	max-width: calc(100vw - var(--br) * 2);
+	max-height: calc(100vh - var(--br) * 2);
+	overflow: scroll;
 }
 @media (prefers-color-scheme: dark) {
 	.easyjs-popup {
