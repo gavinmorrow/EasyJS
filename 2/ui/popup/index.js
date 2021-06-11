@@ -29,6 +29,7 @@ class Popup {
 		this.wrapper.appendChild(this.popup);
 		document.body.appendChild(this.wrapper);
 	}
+	show (ms = Infinity, del) {
 		return new Promise(async resolve => {
 			this.wrapper.style.zIndex = "100000000000000000000000000000";
 			this.wrapper.style.opacity = "1";
