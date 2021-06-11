@@ -29,12 +29,11 @@ class Popup {
 		this.wrapper.appendChild(this.popup);
 		document.body.appendChild(this.wrapper);
 	}
-	show (ms = Infinity, del) {
+	show (ms = this.ms) {
 		return new Promise(async resolve => {
 			this.wrapper.style.zIndex = "100000000000000000000000000000";
 			this.wrapper.style.opacity = "1";
 			await sleep(1000 + ms);
-			this.hide(del);
 			resolve(true);
 		});
 	}
