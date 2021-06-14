@@ -30,11 +30,11 @@ class Popup {
 			this.wrapper.appendChild(this.popup);
 			document.body.appendChild(this.wrapper);
 		}
-		if (!promise) main();
-		else return new Promise(async resolve => {
+		if (promise) return new Promise(async resolve => {
 			main();
 			resolve(true);
 		});
+		else main();
 	}
 	show (ms = this.ms) {
 		return new Promise(async resolve => {
