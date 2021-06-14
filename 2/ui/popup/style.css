@@ -33,6 +33,7 @@
 	max-width: calc(100vw - var(--br) * 2);
 	max-height: calc(100vh - var(--br) * 2);
 	overflow: scroll;
+	display: block;
 }
 @media (prefers-color-scheme: dark) {
 	.easyjs-popup {
