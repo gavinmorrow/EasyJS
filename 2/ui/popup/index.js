@@ -2,7 +2,7 @@
 
 const popupStyle = document.createElement("link");
 popupStyle.rel = "stylesheet";
-popupStyle.href = "https://gavinmorrow.github.io/EasyJS/1/ui/popup/style.css";
+popupStyle.href = "https://gavinmorrow.github.io/EasyJS/2/ui/popup/style.css";
 document.head.appendChild(popupStyle);
 
 const sleep = (ms) => {
