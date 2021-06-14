@@ -60,3 +60,4 @@ class Popup {
 }
 
 export default Popup;
+export sleep;
