@@ -32,8 +32,8 @@ class Popup {
 		}
 		if (promise) return new Promise(async resolve => {
 			main();
-			resolve(true);
-		});
+			resolve(this);
+		}.bind(this));
 		else main();
 	}
 	show (ms = this.ms) {
