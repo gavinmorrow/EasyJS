@@ -10,24 +10,31 @@ const sleep = (ms) => {
 }
 
 class Popup {
-	constructor (txt, ms = 5000, del = false, id = "") {
-		this.txt = txt;
-		this.ms = ms;
-		this.delete = del;
-		this.id = id;
+	constructor (txt, ms = 5000, del = false, id = "", promise = false) {
+		const main = () => {
+			this.txt = txt;
+			this.ms = ms;
+			this.delete = del;
+			this.id = id;
 
-		this.popup = document.createElement("div");
-		this.popup.classList.add("easyjs-popup");
-		this.popup.innerHTML = this.txt;
-		this.popup.id = this.id;
+			this.popup = document.createElement("div");
+			this.popup.classList.add("easyjs-popup");
+			this.popup.innerHTML = this.txt;
+			this.popup.id = this.id;
 
-		this.wrapper = document.createElement("div");
-		this.wrapper.classList.add("easyjs-popup-wrapper");
-		this.wrapper.style.zIndex = "-1000";
-		this.wrapper.style.opacity = "0";
+			this.wrapper = document.createElement("div");
+			this.wrapper.classList.add("easyjs-popup-wrapper");
+			this.wrapper.style.zIndex = "-1000";
+			this.wrapper.style.opacity = "0";
 
-		this.wrapper.appendChild(this.popup);
-		document.body.appendChild(this.wrapper);
+			this.wrapper.appendChild(this.popup);
+			document.body.appendChild(this.wrapper);
+		}
+		if (!promise) main();
+		else return new Promise(async resolve => {
+			main();
+			resolve(true);
+		});
 	}
 	show (ms = this.ms) {
 		return new Promise(async resolve => {
