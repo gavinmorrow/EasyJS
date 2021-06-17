@@ -24,7 +24,7 @@
 	position: relative;
 	text-align: center;
 	color: var(--easyjs-text);
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(var(--easyjs-rgb-bg), 0.9);
 	box-shadow: 0 0 var(--br) 0 var(--easyjs-text);
 	padding: var(--br);
 	border-radius: var(--br);
@@ -34,9 +34,4 @@
 	max-height: calc(100vh - var(--br) * 2);
 	overflow: scroll;
 	display: block;
-}
-@media (prefers-color-scheme: dark) {
-	.easyjs-popup {
-		background-color: rgba(0, 0, 0, 0.9);
-	}
 }
