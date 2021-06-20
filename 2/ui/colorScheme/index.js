@@ -102,6 +102,7 @@ const update = () => {
 	colorScheme.setColors();
 };
 update();
+addEventListener("cs", update);
 matchMedia("(prefers-color-scheme: light)").addEventListener("change", update);
 
 export default colorScheme;
