@@ -1,6 +1,8 @@
 // © 2021 Gavin Morrow
 // EasyJS UI
 
+let cs;
+
 if (document.documentElement.style.getPropertyValue(`--easyjs-bg`).length > 0) {
 	console.error("EasyJS UI Color Scheme aready loaded.");
 }else {
@@ -106,5 +108,6 @@ if (document.documentElement.style.getPropertyValue(`--easyjs-bg`).length > 0) {
 	addEventListener("cs", update);
 	matchMedia("(prefers-color-scheme: light)").addEventListener("change", update);
 
-	export default colorScheme;
+	cs = colorScheme;
 }
+export default cs;
