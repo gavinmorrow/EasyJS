@@ -7,7 +7,6 @@
 	border-radius: var(--br);
 	padding: calc(var(--br) / 1);
 	text-align: center;
-	z-index: 1000000;
 }
 #easyjs-cookie-consent {
 	position: fixed;
@@ -22,6 +21,7 @@
 	border-top-right-radius: var(--br);
 	opacity: 1;
 	transition: opacity 1s;
+	z-index: 1000000;
 }
 #easyjs-cookie-consent-button {
 	color: var(--easyjs-text);

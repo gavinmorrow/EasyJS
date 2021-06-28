@@ -3,7 +3,7 @@
 import Cookie from "../cookie/index.js";
 const elemStyle = document.createElement("link");
 elemStyle.rel = "stylesheet";
-elemStyle.href = "https://gavinmorrow.github.io/EasyJS/1/cookies/cookieConsent/style.css";
+elemStyle.href = "https://gavinmorrow.github.io/EasyJS/2/cookies/cookieConsent/style.css";
 document.head.appendChild(elemStyle);
 const cookieConsent = (txt = "By continuting to use this site, you consent to our use of cookies.") => {
 	if (document.getElementById("easyjs-cookie-consent")) return false;
