@@ -38,21 +38,21 @@ class Popup {
 		else main();
 	}
 	show (ms = this.ms) {
-		return new Promise(async resolve => {
+		return new Promise((async resolve => {
 			this.wrapper.style.zIndex = "100000000000000000000000000000";
 			this.wrapper.style.opacity = "1";
 			await sleep(1000 + ms);
 			resolve(this);
-		}.bind(this));
+		}).bind(this));
 	}
 	hide (del = this.delete) {
-		return new Promise(async resolve => {
+		return new Promise((async resolve => {
 			this.wrapper.style.opacity = "0";
 			await sleep(1000);
 			this.wrapper.style.zIndex = "-1000";
 			if (del) this.remove();
 			resolve(this);
-		}.bind(this))
+		}).bind(this));
 	}
 	remove () {
 		return this.wrapper.remove();
