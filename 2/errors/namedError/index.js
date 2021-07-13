@@ -1,7 +1,8 @@
 // EasyJS Errors
 
 class NamedError extends Error {
-	constructor(name, msg) {
+	customName = "";
+	constructor(name = "Error", msg = "") {
 		super(msg);
 		this.name = name;
 	}
